@@ -67,6 +67,20 @@ body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-h
 .al-i{background:#e6f1fb;border:1.5px solid #7ab8e8;border-radius:10px;padding:10px 12px;font-size:12px;margin-top:9px;line-height:1.55;color:#0a3870}
 .al-w{background:#fde8e8;border:1.5px solid #e07070;border-radius:10px;padding:10px 12px;font-size:12px;margin-top:9px;line-height:1.55;color:#700000}
 .hidden{display:none}
+/* ── COUNTRY SEARCH ── */
+.srch-wrap{position:relative;margin-bottom:10px}
+.srch-input{width:100%;padding:12px 40px 12px 40px;font-size:15px;border:1.5px solid #ddd;border-radius:12px;background:#fff;color:#1a1a18;outline:none;-webkit-appearance:none}
+.srch-input:focus{border-color:#1a3a6b}
+.srch-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none}
+.srch-clear{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:17px;color:#aaa;cursor:pointer;background:none;border:none;padding:4px;display:none}
+.srch-results{background:#fff;border:1.5px solid #e0e0da;border-radius:12px;overflow:hidden;margin-top:4px}
+.srch-item{padding:13px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0ee}
+.srch-item:last-child{border-bottom:none}
+.srch-item:active{background:#e8eef8}
+.srch-flag{font-size:22px;flex-shrink:0}
+.srch-name{font-size:14px;font-weight:600;color:#1a1a18}
+.srch-route{font-size:11px;color:#6a6a65;margin-top:1px}
+.srch-empty{padding:16px;text-align:center;font-size:13px;color:#888}
 </style>
 </head>
 <body>
@@ -150,7 +164,8 @@ pt:{ls:'Selecciona o teu idioma',go:'Continuar →',
   ams:'Menores de 18 anos não podem usar e-gate/RAPID na saída. Devem acompanhar sempre o adulto.',
   anc:'O teu passaporte não tem chip — não funciona no SSK nem na e-gate. Usa o balcão manual.',
   aas:'Procedimento legal específico. Informa um agente da autoridade imediatamente.',
-  bk:'← Corrigir',br:'Recomeçar'},
+  srch_ph:'Pesquisa pelo teu país',
+    bk:'← Corrigir',br:'Recomeçar'},
 br:{ls:'Selecione seu idioma',go:'Continuar →',
   qd:'O que você vai fazer?',qs:'Selecione sua situação atual',
   ent:'Entrar em Portugal',ents:'Chegada — voo internacional',
@@ -198,7 +213,8 @@ br:{ls:'Selecione seu idioma',go:'Continuar →',
   ams:'Menores de 18 anos não podem usar e-gate/RAPID na saída.',
   anc:'Seu passaporte não tem chip eletrônico — não funciona no SSK nem no e-gate. Use o balcão manual.',
   aas:'Procedimento legal específico. Informe um agente da autoridade imediatamente.',
-  bk:'← Corrigir',br:'Recomeçar'},
+  srch_ph:'Pesquise pelo seu país',
+    bk:'← Corrigir',br:'Recomeçar'},
 en:{ls:'Select your language',go:'Continue →',
   qd:'What are you doing?',qs:'Select your current situation',
   ent:'Entering Portugal',ents:'Arrival — international flight',
@@ -246,7 +262,8 @@ en:{ls:'Select your language',go:'Continue →',
   ams:'Children under 18 cannot use e-gate/RAPID on exit.',
   anc:'Your passport has no electronic chip — it cannot be used at the SSK or e-gate. Use the manual counter.',
   aas:'Specific legal procedure. Inform a border authority officer immediately.',
-  bk:'← Correct',br:'Start again'},
+  srch_ph:'Search your country',
+    bk:'← Correct',br:'Start again'},
 fr:{ls:'Sélectionnez votre langue',go:'Continuer →',
   qd:'Que faites-vous ?',qs:'Sélectionnez votre situation',
   ent:'Entrer au Portugal',ents:'Arrivée — vol international',
@@ -294,7 +311,8 @@ fr:{ls:'Sélectionnez votre langue',go:'Continuer →',
   ams:'Les enfants de moins de 18 ans ne peuvent pas utiliser l\'e-gate/RAPID à la sortie.',
   anc:'Votre passeport n\'a pas de puce — il ne fonctionne pas au SSK ni à l\'e-gate.',
   aas:'Procédure légale spécifique. Informez immédiatement un agent.',
-  bk:'← Corriger',br:'Recommencer'},
+  srch_ph:'Rechercher votre pays',
+    bk:'← Corriger',br:'Recommencer'},
 es:{ls:'Selecciona tu idioma',go:'Continuar →',
   qd:'¿Qué vas a hacer?',qs:'Selecciona tu situación actual',
   ent:'Entrar en Portugal',ents:'Llegada — vuelo internacional',
@@ -342,7 +360,8 @@ es:{ls:'Selecciona tu idioma',go:'Continuar →',
   ams:'Los menores de 18 años no pueden usar e-gate/RAPID en la salida.',
   anc:'Tu pasaporte no tiene chip — no funciona en el SSK ni en la e-gate.',
   aas:'Procedimiento legal específico. Informa inmediatamente a un agente.',
-  bk:'← Corregir',br:'Empezar de nuevo'},
+  srch_ph:'Busca tu país',
+    bk:'← Corregir',br:'Empezar de nuevo'},
 de:{ls:'Sprache auswählen',go:'Weiter →',
   qd:'Was möchten Sie tun?',qs:'Bitte wählen Sie Ihre Situation',
   ent:'Portugal einreisen',ents:'Ankunft — internationaler Flug',
@@ -390,7 +409,8 @@ de:{ls:'Sprache auswählen',go:'Weiter →',
   ams:'Kinder unter 18 Jahren dürfen das E-Gate/RAPID bei der Ausreise nicht benutzen.',
   anc:'Ihr Reisepass hat keinen Chip — er funktioniert nicht am SSK oder E-Gate.',
   aas:'Spezifisches rechtliches Verfahren. Informieren Sie sofort einen Beamten.',
-  bk:'← Korrigieren',br:'Neu beginnen'},
+  srch_ph:'Land suchen',
+    bk:'← Korrigieren',br:'Neu beginnen'},
 it:{ls:'Seleziona la tua lingua',go:'Continua →',
   qd:'Cosa stai facendo?',qs:'Seleziona la tua situazione',
   ent:'Entrare in Portogallo',ents:'Arrivo — volo internazionale',
@@ -438,7 +458,8 @@ it:{ls:'Seleziona la tua lingua',go:'Continua →',
   ams:'I minori di 18 anni non possono usare l\'e-gate/RAPID all\'uscita.',
   anc:'Il tuo passaporto non ha chip — non funziona all\'SSK né all\'e-gate.',
   aas:'Procedura legale specifica. Informa immediatamente un agente.',
-  bk:'← Correggere',br:'Ricominciare'},
+  srch_ph:'Cerca il tuo paese',
+    bk:'← Correggere',br:'Ricominciare'},
 zh:{ls:'请选择您的语言',go:'继续 →',
   qd:'您要做什么？',qs:'请选择您当前的情况',
   ent:'入境葡萄牙',ents:'到达 — 国际航班',
@@ -486,7 +507,8 @@ zh:{ls:'请选择您的语言',go:'继续 →',
   ams:'18岁以下儿童在出境时不能使用电子通道/RAPID。',
   anc:'您的护照没有电子芯片 — 无法在SSK或电子通道使用。请使用人工柜台。',
   aas:'特定法律程序。请立即告知边境当局官员。',
-  bk:'← 更正',br:'重新开始'},
+  srch_ph:'搜索您的国家',
+    bk:'← 更正',br:'重新开始'},
 ar:{ls:'اختر لغتك',go:'متابعة →',
   qd:'ماذا ستفعل؟',qs:'اختر وضعك الحالي',
   ent:'الدخول إلى البرتغال',ents:'الوصول — رحلة دولية',
@@ -534,7 +556,8 @@ ar:{ls:'اختر لغتك',go:'متابعة →',
   ams:'الأطفال دون 18 عاماً لا يمكنهم استخدام البوابة الإلكترونية/RAPID عند المغادرة.',
   anc:'جواز سفرك لا يحتوي على شريحة إلكترونية — لا يعمل في SSK أو البوابة.',
   aas:'إجراء قانوني محدد. أخبر ضابط سلطة الحدود فوراً.',
-  bk:'← تصحيح',br:'البدء من جديد'},
+  srch_ph:'ابحث عن بلدك',
+    bk:'← تصحيح',br:'البدء من جديد'},
 hi:{ls:'अपनी भाषा चुनें',go:'जारी रखें →',
   qd:'आप क्या कर रहे हैं?',qs:'अपनी वर्तमान स्थिति चुनें',
   ent:'पुर्तगाल में प्रवेश',ents:'आगमन — अंतर्राष्ट्रीय उड़ान',
@@ -582,7 +605,8 @@ hi:{ls:'अपनी भाषा चुनें',go:'जारी रखें
   ams:'18 वर्ष से कम बच्चे निकास पर e-gate/RAPID का उपयोग नहीं कर सकते।',
   anc:'आपके पासपोर्ट में इलेक्ट्रॉनिक चिप नहीं है — SSK या e-gate पर काम नहीं करता।',
   aas:'विशिष्ट कानूनी प्रक्रिया। तुरंत सीमा अधिकारी को सूचित करें।',
-  bk:'← सुधारें',br:'फिर से शुरू करें'},
+  srch_ph:'अपना देश खोजें',
+    bk:'← सुधारें',br:'फिर से शुरू करें'},
 ru:{ls:'Выберите язык',go:'Продолжить →',
   qd:'Что вы делаете?',qs:'Выберите вашу текущую ситуацию',
   ent:'Въезд в Португалию',ents:'Прибытие — международный рейс',
@@ -630,7 +654,8 @@ ru:{ls:'Выберите язык',go:'Продолжить →',
   ams:'Дети до 18 лет не могут использовать e-gate/RAPID при выезде.',
   anc:'В вашем паспорте нет чипа — он не работает в SSK или e-gate.',
   aas:'Специальная юридическая процедура. Немедленно сообщите сотруднику.',
-  bk:'← Исправить',br:'Начать заново'}
+  srch_ph:'Найдите свою страну',
+    bk:'← Исправить',br:'Начать заново'}
 };
 
 function t(k){ return (TX[L]||TX.en)[k]||k; }
@@ -642,6 +667,133 @@ function opt(icon,title,sub,val){
   return '<div class="opt" data-val="'+val+'"><div class="oi">'+icon+'</div><div><div class="ot">'+title+'</div>'+(sub?'<div class="os">'+sub+'</div>':'')+'</div></div>';
 }
 
+
+/* ── Índice de países para pesquisa directa ── */
+var COUNTRIES = [
+  // e-gate entrada E saída
+  {names:['United States','USA','EUA','Estados Unidos','Etats-Unis','États-Unis','vereinigte staaten','stati uniti','美国','الولايات المتحدة','संयुक्त राज्य','США'],flag:'🇺🇸',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Canada','Canadá','Kanada','カナダ','加拿大','كندا','कनाडा','Канада'],flag:'🇨🇦',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['United Kingdom','UK','Reino Unido','Royaume-Uni','Vereinigtes Königreich','Regno Unito','英国','المملكة المتحدة','यूनाइटेड किंगडम','Великобритания'],flag:'🇬🇧',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Japan','Japão','Japon','Japón','Japan','Giappone','日本','اليابان','जापान','Япония'],flag:'🇯🇵',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Australia','Austrália','Australie','Australien','Australia','澳大利亚','أستراليا','ऑस्ट्रेलिया','Австралия'],flag:'🇦🇺',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['New Zealand','Nova Zelândia','Nouvelle-Zélande','Neuseeland','Nuova Zelanda','新西兰','نيوزيلندا','न्यूजीलैंड','Новая Зеландия'],flag:'🇳🇿',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Singapore','Singapura','Singapour','Singapur','Singapur','新加坡','سنغافورة','सिंगापुर','Сингапур'],flag:'🇸🇬',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Israel','إسرائيل','इज़राइल','Израиль'],flag:'🇮🇱',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['United Arab Emirates','UAE','EAU','Emirados Árabes','Émirats arabes','Vereinigte Arabische Emirate','Emirati Arabi','阿联酋','الإمارات','यूएई','ОАЭ'],flag:'🇦🇪',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Malaysia','Malásia','Malaisie','Malasia','Malesia','马来西亚','ماليزيا','मलेशिया','Малайзия'],flag:'🇲🇾',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Mexico','México','Mexique','Messico','墨西哥','المكسيك','मेक्सिको','Мексика'],flag:'🇲🇽',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  {names:['Chile','Chili','Cile','智利','تشيلي','चिली','Чили'],flag:'🇨🇱',route:{doc:'tc',chip:'y',nat_ent:'ee',nat_sai:'es'}},
+  // e-gate só na saída
+  {names:['Brazil','Brasil','Brésil','Brasilien','Brasile','巴西','البرازيل','ब्राज़ील','Бразилия'],flag:'🇧🇷',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['China','Chine','Cina','中国','الصين','चीन','Китай'],flag:'🇨🇳',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Argentina','Argentine','Argentinien','Argentina','阿根廷','الأرجنتين','अर्जेंटीना','Аргентина'],flag:'🇦🇷',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Taiwan','Taïwan','Taiwán','台湾','تايوان','ताइवान','Тайвань'],flag:'🇹🇼',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Serbia','Sérvia','Serbie','Serbien','Serbia','Сербия','صربيا','सर्बिया'],flag:'🇷🇸',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Moldova','Moldávia','Moldavie','Moldawien','Moldavia','Молдова','مولدوفا','मोल्दोवा'],flag:'🇲🇩',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Hong Kong','Hong-Kong','홍콩','香港','هونغ كونغ','हांगकांग','Гонконг'],flag:'🇭🇰',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  {names:['Macau','Macao','澳门','ماكاو','मकाऊ','Макао'],flag:'🇲🇴',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'es'}},
+  // SSK → balcão (todos os outros TCN com chip)
+  {names:['India','Índia','Inde','Indien','India','भारत','الهند','Индия'],flag:'🇮🇳',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Russia','Rússia','Russie','Russland','Russia','Россия','روسيا','रूस'],flag:'🇷🇺',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Turkey','Turquia','Turquie','Türkei','Turchia','土耳其','تركيا','तुर्की','Турция'],flag:'🇹🇷',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['South Korea','Coreia do Sul','Corée du Sud','Südkorea','Corea del Sud','韩国','كوريا الجنوبية','दक्षिण कोरिया','Южная Корея'],flag:'🇰🇷',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Thailand','Tailândia','Thaïlande','Thailand','Thailandia','泰国','تايلاند','थाईलैंड','Таиланд'],flag:'🇹🇭',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Indonesia','Indonésie','Indonesien','Indonesia','印度尼西亚','إندونيسيا','इंडोनेशिया','Индонезия'],flag:'🇮🇩',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Philippines','Filipinas','Philippines','Philippinen','Filippine','菲律宾','الفلبين','फिलीपींस','Филиппины'],flag:'🇵🇭',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Vietnam','Vietname','Viêt Nam','Vietnam','Vietnam','越南','فيتنام','वियतनाम','Вьетнам'],flag:'🇻🇳',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Colombia','Colômbia','Colombie','Kolumbien','Colombia','哥伦比亚','كولومبيا','कोलंबिया','Колумбия'],flag:'🇨🇴',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Peru','Pérou','Perù','秘鲁','بيرو','पेरू','Перу'],flag:'🇵🇪',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Angola'],flag:'🇦🇴',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Mozambique','Moçambique','Mozambique','Mosambik','Mozambico','莫桑比克','موزمبيق','मोज़ाम्बिक','Мозамбик'],flag:'🇲🇿',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Nigeria','Nigéria','Nigéria','Nigéria','Nigeria','尼日利亚','نيجيريا','नाइजीरिया','Нигерия'],flag:'🇳🇬',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Ghana','Gana','加纳','غانا','घाना','Гана'],flag:'🇬🇭',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Senegal','Sénégal','塞内加尔','السنغال','सेनेगल','Сенегал'],flag:'🇸🇳',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Morocco','Marrocos','Maroc','Marokko','Marocco','摩洛哥','المغرب','मोरक्को','Марокко'],flag:'🇲🇦',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Egypt','Egito','Égypte','Ägypten','Egitto','埃及','مصر','मिस्र','Египет'],flag:'🇪🇬',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Kenya','Quénia','Kenya','Kenia','Kenya','肯尼亚','كينيا','केन्या','Кения'],flag:'🇰🇪',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Ethiopia','Etiópia','Éthiopie','Äthiopien','Etiopia','埃塞俄比亚','إثيوبيا','इथियोपिया','Эфиопия'],flag:'🇪🇹',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Pakistan','Paquistão','Pakistan','Pakistan','Pakistan','巴基斯坦','باكستان','पाकिस्तान','Пакистан'],flag:'🇵🇰',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Bangladesh','بنغلاديش','बांग्लादेश','Бангладеш'],flag:'🇧🇩',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Saudi Arabia','Arábia Saudita','Arabie saoudite','Saudi-Arabien','Arabia Saudita','沙特阿拉伯','المملكة العربية السعودية','सऊदी अरब','Саудовская Аравия'],flag:'🇸🇦',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Iran','Irão','Irak','イラン','إيران','ईरान','Иран'],flag:'🇮🇷',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Ukraine','Ucrânia','Ukraine','Ukraine','Ucraina','乌克兰','أوكرانيا','यूक्रेन','Украина'],flag:'🇺🇦',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Cuba','کوبا','Куба','क्यूबा'],flag:'🇨🇺',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  {names:['Cape Verde','Cabo Verde','Cap-Vert','Kap Verde','Capo Verde','佛得角','الرأس الأخضر','केप वर्डे','Кабо-Верде'],flag:'🇨🇻',route:{doc:'tc',chip:'y',nat_ent:'be',nat_sai:'bs'}},
+  // UE / EEE / Suíça
+  {names:['Portugal'],flag:'🇵🇹',route:{doc:'ue'}},
+  {names:['Spain','Espanha','Espagne','Spanien','Spagna','西班牙','إسبانيا','स्पेन','Испания'],flag:'🇪🇸',route:{doc:'ue'}},
+  {names:['France','França','Frankreich','Francia','法国','فرنسا','फ्रांस','Франция'],flag:'🇫🇷',route:{doc:'ue'}},
+  {names:['Germany','Alemanha','Allemagne','Deutschland','Germania','德国','ألمانيا','जर्मनी','Германия'],flag:'🇩🇪',route:{doc:'ue'}},
+  {names:['Italy','Itália','Italie','Italien','Italia','意大利','إيطاليا','इटली','Италия'],flag:'🇮🇹',route:{doc:'ue'}},
+  {names:['Netherlands','Países Baixos','Pays-Bas','Niederlande','Paesi Bassi','荷兰','هولندا','नीदरलैंड','Нидерланды'],flag:'🇳🇱',route:{doc:'ue'}},
+  {names:['Belgium','Bélgica','Belgique','Belgien','Belgio','比利时','بلجيكا','बेल्जियम','Бельгия'],flag:'🇧🇪',route:{doc:'ue'}},
+  {names:['Poland','Polónia','Pologne','Polen','Polonia','波兰','بولندا','पोलैंड','Польша'],flag:'🇵🇱',route:{doc:'ue'}},
+  {names:['Sweden','Suécia','Suède','Schweden','Svezia','瑞典','السويد','स्वीडन','Швеция'],flag:'🇸🇪',route:{doc:'ue'}},
+  {names:['Denmark','Dinamarca','Danemark','Dänemark','Danimarca','丹麦','الدنمارك','डेनमार्क','Дания'],flag:'🇩🇰',route:{doc:'ue'}},
+  {names:['Finland','Finlândia','Finlande','Finnland','Finlandia','芬兰','فنلندا','फिनलैंड','Финляндия'],flag:'🇫🇮',route:{doc:'ue'}},
+  {names:['Greece','Grécia','Grèce','Griechenland','Grecia','希腊','اليونان','यूनान','Греция'],flag:'🇬🇷',route:{doc:'ue'}},
+  {names:['Austria','Áustria','Autriche','Österreich','Austria','奥地利','النمسا','ऑस्ट्रिया','Австрия'],flag:'🇦🇹',route:{doc:'ue'}},
+  {names:['Romania','Roménia','Roumanie','Rumänien','Romania','罗马尼亚','رومانيا','रोमानिया','Румыния'],flag:'🇷🇴',route:{doc:'ue'}},
+  {names:['Switzerland','Suíça','Suisse','Schweiz','Svizzera','瑞士','سويسرا','स्विट्जरलैंड','Швейцария'],flag:'🇨🇭',route:{doc:'ue'}},
+  {names:['Norway','Noruega','Norvège','Norwegen','Norvegia','挪威','النرويج','नॉर्वे','Норвегия'],flag:'🇳🇴',route:{doc:'ue'}},
+  {names:['Ireland','Irlanda','Irlande','Irland','Irlanda','爱尔兰','أيرلندا','आयरलैंड','Ирландия'],flag:'🇮🇪',route:{doc:'ue'}},
+  {names:['Czech Republic','República Checa','Tchéquie','Tschechien','Repubblica Ceca','捷克','التشيك','चेक गणराज्य','Чехия'],flag:'🇨🇿',route:{doc:'ue'}},
+  {names:['Hungary','Hungria','Hongrie','Ungarn','Ungheria','匈牙利','المجر','हंगरी','Венгрия'],flag:'🇭🇺',route:{doc:'ue'}},
+  {names:['Croatia','Croácia','Croatie','Kroatien','Croazia','克罗地亚','كرواتيا','क्रोएशिया','Хорватия'],flag:'🇭🇷',route:{doc:'ue'}},
+  {names:['Slovakia','Eslováquia','Slovaquie','Slowakei','Slovacchia','斯洛伐克','سلوفاكيا','स्लोवाकिया','Словакия'],flag:'🇸🇰',route:{doc:'ue'}},
+  {names:['Bulgaria','Bulgária','Bulgarie','Bulgarien','Bulgaria','保加利亚','بلغاريا','बुल्गारिया','Болгария'],flag:'🇧🇬',route:{doc:'ue'}},
+  {names:['Slovenia','Eslovénia','Slovénie','Slowenien','Slovenia','斯洛文尼亚','سلوفينيا','स्लोवेनिया','Словения'],flag:'🇸🇮',route:{doc:'ue'}},
+  {names:['Estonia','Estónia','Estonie','Estland','Estonia','爱沙尼亚','إستونيا','एस्टोनिया','Эстония'],flag:'🇪🇪',route:{doc:'ue'}},
+  {names:['Latvia','Letónia','Lettonie','Lettland','Lettonia','拉脱维亚','لاتفيا','लातविया','Латвия'],flag:'🇱🇻',route:{doc:'ue'}},
+  {names:['Lithuania','Lituânia','Lituanie','Litauen','Lituania','立陶宛','ليتوانيا','लिथुआनिया','Литва'],flag:'🇱🇹',route:{doc:'ue'}},
+  {names:['Luxembourg','Luxemburgo','Luxemburg','Lussemburgo','卢森堡','لوكسمبورغ','लक्जमबर्ग','Люксембург'],flag:'🇱🇺',route:{doc:'ue'}},
+  {names:['Malta','马耳他','مالطا','माल्टा','Мальта'],flag:'🇲🇹',route:{doc:'ue'}},
+  {names:['Cyprus','Chipre','Chypre','Zypern','Cipro','塞浦路斯','قبرص','साइप्रस','Кипр'],flag:'🇨🇾',route:{doc:'ue'}},
+  {names:['Iceland','Islândia','Islande','Island','Islanda','冰岛','آيسلندا','आइसलैंड','Исландия'],flag:'🇮🇸',route:{doc:'ue'}},
+  {names:['Liechtenstein','Liechtenstein','列支敦士登','ليختنشتاين','लिकटेंस्टाइन','Лихтенштейн'],flag:'🇱🇮',route:{doc:'ue'}}
+];
+
+function normalizeSearch(s){
+  return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').trim();
+}
+
+function searchCountries(q){
+  if(!q||q.length<2) return [];
+  var nq=normalizeSearch(q);
+  return COUNTRIES.filter(function(c){
+    return c.names.some(function(n){ return normalizeSearch(n).indexOf(nq)>=0; });
+  }).slice(0,6);
+}
+
+function getRouteLabel(r){
+  var tx=TX[L]||TX.en;
+  if(r.doc==='ue') return (tx.deg||'E-gate/RAPID')+' · '+(tx.qeu||'EU queue');
+  if(r.doc==='tc' && r.chip==='y'){
+    // Para entrada (default)
+    if(r.nat_ent==='ee') return 'SSK → '+(tx.deg||'E-gate')+' ('+(tx.ent||'entry')+') · SSK → '+(tx.deg||'E-gate')+' ('+(tx.sai||'exit')+')';
+    if(r.nat_ent==='be') return 'SSK → '+(tx.deg||'E-gate')+' ('+(tx.sai||'exit')+') · SSK → '+(tx.dbo||'Box')+' ('+(tx.ent||'entry')+')';
+    return 'SSK → '+(tx.dbo||'Box')+' · '+(tx.qal||'All passports');
+  }
+  return tx.dbo||'Manual counter';
+}
+
+function pickCountry(idx){
+  var c=COUNTRIES[idx];
+  var r=c.route;
+  // Pré-preencher o estado e ir para o resultado
+  S={};H=[];
+  S.dir='ent'; H.push('dir_ent');
+  S.doc=r.doc; H.push('doc_'+r.doc);
+  if(r.doc==='tc'){
+    S.chip=r.chip; H.push('chip_'+r.chip);
+    if(r.chip==='y'&&r.nat_ent){
+      S.nat=r.nat_ent; H.push('nat_'+r.nat_ent);
+    }
+  }
+  S.min='n'; H.push('min_n');
+  showResult();
+}
+
 function showLang(){
   document.body.style.direction=L==='ar'?'rtl':'ltr';
   prog(0);
@@ -651,13 +803,46 @@ function showLang(){
   });
   h+='</div></div>';
   h+='<button class="btn btnp" id="btn-go">'+t('go')+'</button>';
+  // Search bar
+  h+='<div style="margin-top:14px"><div class="srch-wrap">';
+  h+='<span class="srch-icon">🔍</span>';
+  h+='<input class="srch-input" id="csrch" type="search" placeholder="🌍 '+(TX[L]||TX.en).srch_ph+'" autocomplete="off" autocorrect="off" spellcheck="false">';
+  h+='<button class="srch-clear" id="csrch-clr">✕</button>';
+  h+='</div>';
+  h+='<div id="csrch-res" class="srch-results" style="display:none"></div>';
+  h+='</div>';
   set(h);
-  // Adicionar listeners após set()
+  // Listeners lang
   document.querySelectorAll('.lbtn').forEach(function(el){
     el.addEventListener('click', function(){ pickLang(this.getAttribute('data-lang')); });
   });
   var bg=document.getElementById('btn-go');
   if(bg) bg.addEventListener('click', startFlow);
+  // Listeners search
+  var si=document.getElementById('csrch');
+  var sr=document.getElementById('csrch-res');
+  var sc=document.getElementById('csrch-clr');
+  if(si){
+    si.addEventListener('input',function(){
+      var q=si.value.trim();
+      sc.style.display=q?'block':'none';
+      var hits=searchCountries(q);
+      if(!q||!hits.length){sr.style.display='none';sr.innerHTML='';return;}
+      sr.innerHTML=hits.map(function(c,i){
+        return '<div class="srch-item" data-ci="'+COUNTRIES.indexOf(c)+'">'
+          +'<span class="srch-flag">'+c.flag+'</span>'
+          +'<div><div class="srch-name">'+c.names[0]+'</div>'
+          +'<div class="srch-route">'+getRouteLabel(c.route)+'</div></div></div>';
+      }).join('');
+      sr.style.display='block';
+      sr.querySelectorAll('.srch-item').forEach(function(el){
+        el.addEventListener('click',function(){pickCountry(+this.getAttribute('data-ci'));});
+        el.addEventListener('touchend',function(e){e.preventDefault();pickCountry(+this.getAttribute('data-ci'));});
+      });
+    });
+    si.addEventListener('keydown',function(e){if(e.key==='Enter'){si.blur();}});
+    if(sc) sc.addEventListener('click',function(){si.value='';sr.style.display='none';sr.innerHTML='';sc.style.display='none';});
+  }
 }
 
 function pickLang(code){ L=code; document.body.style.direction=L==='ar'?'rtl':'ltr'; showLang(); }
