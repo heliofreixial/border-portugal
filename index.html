@@ -13,7 +13,7 @@
 <style>
 
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-height:100vh}
+body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-height:100vh;-webkit-text-size-adjust:100%}
 .w{max-width:480px;margin:0 auto;padding:14px}
 .hdr{background:#1a3a6b;border-radius:14px;padding:15px 16px;text-align:center;color:#fff;margin-bottom:13px}
 .hdr h1{font-size:18px;font-weight:700;margin-bottom:2px}
@@ -53,7 +53,7 @@ body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-h
 .srch .si{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none}
 .srch .sc{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:17px;color:#aaa;cursor:pointer;background:none;border:none;padding:4px;display:none}
 .srch-res{background:#fff;border:1.5px solid #e0e0da;border-radius:12px;overflow:hidden;margin-top:4px;display:none}
-.sri{padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0ee}
+.sri{padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0ee;touch-action:manipulation;-webkit-touch-callout:none}
 .sri:last-child{border-bottom:none}
 .sri:active{background:#e8eef8}
 .sri-fl{font-size:22px;flex-shrink:0}
@@ -1657,19 +1657,11 @@ var COUNTRIES=[
 
 /* ─── Estado ─── */
 var L='en', S={}, H=[], SC=[];
-var HAS_TOUCH=('ontouchstart' in window||navigator.maxTouchPoints>0);
-
-// Adicionar listener seguro — touch em dispositivos touch, click em desktop
+// onTap — usar sempre click com touch-action:manipulation no CSS
+// Isso remove o delay 300ms do iOS Safari sem precisar de gestão manual de touch
 function onTap(el, fn){
   if(!el) return;
-  if(HAS_TOUCH){
-    var sy=0, moved=false;
-    el.addEventListener('touchstart',function(e){ sy=e.touches[0].clientY; moved=false; },{passive:true});
-    el.addEventListener('touchmove',function(e){ if(Math.abs(e.touches[0].clientY-sy)>8) moved=true; },{passive:true});
-    el.addEventListener('touchend',function(e){ if(moved) return; e.preventDefault(); fn.call(el,e); });
-  } else {
-    el.addEventListener('click',fn);
-  }
+  el.addEventListener('click', fn);
 }
 
 /* ─── Helpers ─── */
