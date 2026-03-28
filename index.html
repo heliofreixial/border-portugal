@@ -1657,10 +1657,13 @@ var COUNTRIES=[
 
 /* ─── Estado ─── */
 var L='en', S={}, H=[], SC=[];
-// onTap — usar sempre click com touch-action:manipulation no CSS
-// Isso remove o delay 300ms do iOS Safari sem precisar de gestão manual de touch
+// onTap — padrão Pontos Azuis: touchend (iOS) + click (desktop), ambos registados
 function onTap(el, fn){
   if(!el) return;
+  el.addEventListener('touchend', function(e){
+    e.preventDefault();
+    fn.call(el, e);
+  });
   el.addEventListener('click', fn);
 }
 
@@ -1697,6 +1700,8 @@ function mkSearch(inputId, resId, clearId, ph, onPick){
   var sr=document.getElementById(resId);
   var sc=document.getElementById(clearId);
   if(!si) return;
+  // Guardar onPick globalmente para o onclick inline poder aceder
+  window._srchPick = function(ci){ onPick(COUNTRIES[ci]); };
   function run(){
     var q=si.value.trim();
     sc.style.display=q?'block':'none';
@@ -1708,30 +1713,33 @@ function mkSearch(inputId, resId, clearId, ph, onPick){
         '<div><div class="sri-name">'+langName(c)+countryBadge(c)+'</div></div></div>';
     }).join('');
     sr.style.display='block';
-    // Usar touchend em dispositivos touch, click em desktop
-    // Nunca os dois juntos para evitar double-fire no iOS
     sr.querySelectorAll('.sri').forEach(function(el){
-      onTap(el,function(){
-        onPick(COUNTRIES[+this.getAttribute('data-ci')]);
-      });
+      var ci = +el.getAttribute('data-ci');
+      onTap(el, function(){ onPick(COUNTRIES[ci]); });
     });
+
   }
 
   // 'input' é suficiente — cobre todos os browsers incluindo iOS Safari
   si.addEventListener('input', run);
   si.addEventListener('keydown',function(e){ if(e.key==='Enter'){ si.blur(); run(); } });
 
-  // Botão limpar
-  if(sc){
-    onTap(sc,function(){ si.value=''; sr.style.display='none'; sr.innerHTML=''; sc.style.display='none'; si.focus(); });
-  }
+  // Botão limpar via função global
+  window._srchClear = function(id){
+    var inp=document.getElementById('srch-'+id);
+    var res=document.getElementById('srch-res-'+id);
+    var clr=document.getElementById('srch-clr-'+id);
+    if(inp){ inp.value=''; inp.focus(); }
+    if(res){ res.style.display='none'; res.innerHTML=''; }
+    if(clr){ clr.style.display='none'; }
+  };
 }
 
 function srchHTML(id, ph){
   return '<div class="srch">'+
     '<span class="si">🔍</span>'+
     '<input id="srch-'+id+'" type="text" inputmode="search" autocapitalize="none" autocomplete="off" autocorrect="off" autocomplete="off" spellcheck="false" placeholder="'+ph+'">'+
-    '<button class="sc" id="srch-clr-'+id+'">✕</button>'+
+    '<button class="sc" id="srch-clr-'+id+'" onclick="_srchClear(\''+id+'\')" type="button">✕</button>'+
     '</div>'+
     '<div id="srch-res-'+id+'" class="srch-res"></div>';
 }
@@ -1763,8 +1771,9 @@ function backBtn(){
   return '<button class="btn" id="btn-back">'+t('bk')+'</button>';
 }
 function wireBack(){
-  var b=document.getElementById('btn-back');
-  onTap(b,function(){ H.length>0?goBack():showLang(); });
+  var b = document.getElementById('btn-back');
+  if(!b) return;
+  onTap(b, function(){ H.length>0 ? goBack() : showLang(); });
 }
 
 /* ─── Opt helper ─── */
@@ -1776,8 +1785,8 @@ function opt(icon, title, sub, val){
 }
 function wireOpts(){
   document.querySelectorAll('.opt').forEach(function(el){
-    var v=el.getAttribute('data-val');
-    onTap(el,function(){ pick(v); });
+    var v = el.getAttribute('data-val');
+    onTap(el, function(){ pick(v); });
   });
 }
 
@@ -1795,8 +1804,7 @@ function showNoBorder(subKey){
     '</div>';
   set(h);
   wireBack();
-  var br=document.getElementById('btn-restart');
-  onTap(br,restart);
+
 }
 
 /* ─── ECRÃS ─── */
@@ -1814,7 +1822,7 @@ function showLang(){
     {c:'ru',f:'🇷🇺',n:'Русский'}
   ];
   LANGS.forEach(function(l){
-    h+='<div class="lbtn'+(L===l.c?' sel':'')+'" id="lb-'+l.c+'">'+
+    h+='<div class="lbtn'+(L===l.c?' sel':'')+'" data-lang="'+l.c+'">'+
       '<span class="lf">'+l.f+'</span><span class="ln">'+l.n+'</span></div>';
   });
   h+='</div></div>';
@@ -1822,17 +1830,22 @@ function showLang(){
   // Search bar
   h+='<div style="margin-top:14px">'+srchHTML('lang',t('srch_ph'))+'</div>';
   set(h);
-  LANGS.forEach(function(l){
-    var el=document.getElementById('lb-'+l.c);
-    onTap(el,function(){ L=l.c; document.body.style.direction=L==='ar'?'rtl':'ltr'; showLang(); });
+
+  // Listeners botões de língua
+  document.querySelectorAll('.lbtn').forEach(function(el){
+    var code = el.getAttribute('data-lang');
+    onTap(el, function(){ pickLang(code); });
   });
-  var bg=document.getElementById('btn-go');
-  onTap(bg,function(){ S={}; H=[]; showDir(); });
+  var bg = document.getElementById('btn-go');
+  onTap(bg, function(){ S={}; H=[]; showDir(); });
+
   initSearch('lang',function(c){
     // Atalho: pesquisa por país na língua inicial
     quickRouteFromCountry(c,'ent');
   });
 }
+
+function pickLang(code){ L=code; document.body.style.direction=L==='ar'?'rtl':'ltr'; showLang(); }
 
 function showDir(){
   
@@ -2222,8 +2235,8 @@ function showResult(){
   h+='<div class="btn2"><button class="btn" id="btn-back">'+t('bk')+'</button><button class="btn btnp" id="btn-restart">'+t('br')+'</button></div>';
   set(h);
   wireBack();
-  var br=document.getElementById('btn-restart');
-  onTap(br,restart);
+  var br = document.getElementById('btn-restart');
+  onTap(br, restart);
 }
 
 /* ─── Atalho rápido por país (da search na língua) ─── */
