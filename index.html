@@ -13,22 +13,8 @@
 <style>
 
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-height:100vh;-webkit-text-size-adjust:100%;padding-bottom:86px}
+body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-height:100vh;-webkit-text-size-adjust:100%}
 .w{max-width:480px;margin:0 auto;padding:14px}
-/* Footer logos */
-.footer{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:70px;background:#fff;border-top:1px solid #ddd;display:flex;align-items:center;justify-content:center;box-shadow:0 -2px 6px rgba(0,0,0,0.05);z-index:999}
-.footer-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:2px;padding:0 6px;}
-.footer-logo{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;padding:0;}
-.footer-logo img{max-height:18px;max-width:100%;width:auto;object-fit:contain;opacity:.85}
-.footer-logo:nth-child(1) img{max-height:23px}
-.footer-logo.logo-ssi img{max-height:44px}
-.footer-logo.logo-ssi{flex:1.6 1 0;}
-.footer-logo.logo-gnr img{max-height:16px}
-.footer-logo.logo-psp img{max-height:18px}
-.footer-logo.logo-psp{margin-right:11px;}
-.footer-logo.logo-ana img{max-height:20px}
-.footer-logo.logo-ana{margin-left:3px;}
-.footer-logo.logo-tap img{max-height:15px}
 .hdr{background:#1a3a6b;border-radius:14px;padding:15px 16px;text-align:center;color:#fff;margin-bottom:13px}
 .hdr h1{font-size:18px;font-weight:700;margin-bottom:2px}
 .hdr p{font-size:11px;opacity:.8}
@@ -92,33 +78,6 @@ body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-h
 .eq-g{background:#e8f4e8;border:1.5px solid #6abf6a}
 .eq-b{background:#e6f1fb;border:1.5px solid #7ab8e8}
 .eq-a{background:#fce9c0;border:1.5px solid #e0a020}
-.ssk-dest{font-size:15px;font-weight:700;color:#7a4200;margin-left:12px;white-space:nowrap}
-/* ── SSK language hint ── */
-.ssk-hint{background:#1a3a6b;border-radius:14px;padding:16px 16px 18px;color:#fff;margin-top:8px;margin-bottom:14px}
-.ssk-hint-hdr{display:flex;align-items:flex-start;gap:9px;margin-bottom:14px}
-.ssk-hint-hdr .hico{font-size:20px;line-height:1.2;flex-shrink:0}
-.ssk-hint-hdr .htitle{font-size:13px;font-weight:700;line-height:1.25}
-.ssk-hint-hdr .hsub{font-size:11px;opacity:.75;margin-top:3px;line-height:1.4}
-.ssk-flag-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:14px}
-.ssk-fc{display:flex;flex-direction:column;align-items:center;gap:5px;width:58px}
-.ssk-fc .circ{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 2px 6px rgba(0,0,0,.25);line-height:1}
-.ssk-fc.hl .circ{box-shadow:0 0 0 3px #f0c040,0 2px 8px rgba(0,0,0,.3)}
-.ssk-fc .cname{font-size:9px;font-weight:700;text-align:center;color:#fff;opacity:.9;letter-spacing:.02em;line-height:1.2}
-.ssk-fc.hl .cname{color:#ffd84d;opacity:1;font-size:9.5px}
-.ssk-examples{background:rgba(255,255,255,.12);border-radius:10px;padding:10px 12px}
-.ssk-ex-title{font-size:9.5px;font-weight:700;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-.ssk-ex-row{display:flex;align-items:center;gap:7px;margin-bottom:6px}
-.ssk-ex-row:last-child{margin-bottom:0}
-.ssk-ex-flag{font-size:20px;line-height:1;flex-shrink:0}
-.ssk-ex-arr{font-size:12px;opacity:.55;flex-shrink:0}
-.ssk-ex-circ{width:26px;height:26px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.2)}
-.ssk-ex-txt{font-size:12px;line-height:1.3;flex:1}
-.ssk-ex-txt strong{font-size:12.5px;display:block}
-.ssk-ex-txt span{opacity:.7;font-size:10.5px}
-.eq-qr{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
-.eq-qr svg{display:block;border-radius:4px;border:1px solid rgba(0,0,0,.08)}
-.eq-qr-demo{font-size:7px;font-weight:800;letter-spacing:.1em;color:#fff;background:#e08020;border-radius:3px;padding:1px 5px;text-transform:uppercase}
-.eq-qr-lbl{font-size:8px;font-weight:700;color:#7a4200;text-align:center;line-height:1.3;max-width:90px}
 .eq-r{background:#fde8e8;border:1.5px solid #e07070}
 .eq-gr{background:#f0f0ee;border:1.5px solid #aaa}
 .eqi{width:72px;height:50px;object-fit:cover;border-radius:7px;flex-shrink:0;border:1px solid rgba(0,0,0,.08)}
@@ -146,16 +105,6 @@ body{font-family:-apple-system,sans-serif;background:#f0f0ee;color:#1a1a18;min-h
 </style>
 </head>
 <body>
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="logos/GOV_Logo.png" alt="Governo"></div>
-    <div class="footer-logo logo-ssi"><img src="logos/SSI_Logo.png" alt="SSI"></div>
-    <div class="footer-logo logo-gnr"><img src="logos/GNR_Logo.png" alt="GNR"></div>
-    <div class="footer-logo logo-psp"><img src="logos/PSP_Logo.png" alt="PSP"></div>
-    <div class="footer-logo logo-ana"><img src="logos/ANA_Logo.png" alt="ANA"></div>
-    <div class="footer-logo logo-tap"><img src="logos/TAP_Logo.png" alt="TAP"></div>
-  </div>
-</footer>
 <div class="w">
   <div class="hdr">
     <h1>Border Control Portugal</h1>
@@ -174,7 +123,7 @@ var TX={
 'pt':{
   ls:'Selecciona o teu idioma',
   go:'Continuar →',
-  srch_ph:'País do voo (não a tua nacionalidade)',
+  srch_ph:'Pesquisa pelo teu país',
   qd:'O que vais fazer?',
   qs:'Selecciona a tua situação',
   ent:'Entrar em Portugal',
@@ -187,8 +136,6 @@ var TX={
   q_orig_ent_s:'Pesquisa o país de onde parte o teu voo',
   q_orig_sai:'Para onde vais?',
   q_orig_sai_s:'Pesquisa o país de destino do teu voo',
-  q_orig_tra:'De onde vem o teu voo de ligação?',
-  q_orig_tra_s:'Pesquisa o país de onde parte o teu voo de origem',
   q_tra_apt:'O teu próximo voo parte deste aeroporto?',
   q_tra_apt_s:'Indica se o teu voo de ligação usa o mesmo aeroporto',
   tra_same:'Sim, mesmo aeroporto',
@@ -239,7 +186,6 @@ var TX={
   qmis:'Indica a tua situação de viagem',
   m_alone:'Viajo sozinho',
   m_adult:'Viajo com adulto responsável',
-  m_with_minor:'Viajo com menores (< 16/18 anos)',
   m_minor:'Sou menor de 16/18 anos',
   yr:'O teu percurso',
   s_egate:'Dirige-te à e-gate/RAPID',
@@ -251,7 +197,7 @@ var TX={
   s_egate2:'Segue para a e-gate/RAPID',
   s_egate2d:'O quiosque encaminha automaticamente',
   s_box:'Dirige-te ao balcão manual (box)',
-  s_boxd:'Apresenta o teu documento ao agente de fronteira',
+  s_boxd:'Apresenta o teu documento ao agente da PSP',
   s_box2:'Segue para o balcão manual',
   s_box2d:'Fila todos os passaportes (all passports)',
   s_box_eu:'Dirige-te ao balcão manual (box)',
@@ -264,18 +210,10 @@ var TX={
   degs:'Porta automática',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Quiosque depois porta automática',
-  dsb:'Quiosque SSK (auto-serviço)',
-  dsbs:'O quiosque lê o teu documento e encaminha para e-gate ou balcão',
-  ssk_hint_title:'No SSK, selecciona o teu idioma',
-  ssk_hint_sub:'As bandeiras no ecrã são idiomas — não o teu país de origem',
-  ssk_hint_ex:'Exemplos frequentes',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Escolhe a bandeira do Reino Unido',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Escolhe a bandeira de Portugal',
-  qr_note:'Apresente o código QR da app EES na fase do questionário',
+  dsb:'SSK → Balcão manual',
+  dsbs:'Quiosque depois balcão',
   dbo:'Balcão manual (box)',
-  dbos:'Controlo por agente de fronteira',
+  dbos:'Controlo por agente da PSP',
   dbd:'Zona de embarque',
   dbds:'Sem controlo de fronteira',
   dcrew:'Canal de tripulações',
@@ -296,14 +234,14 @@ var TX={
   cn2:'Não',
   qcrew2:'Tens o teu crew ID?',
   qcrew2s:'Cartão de identificação de tripulante válido',
-  q_minor_alone:'Estás acompanhado por um adulto responsável?',
-  q_minor_alone_s:'Como menor de idade, indica se viajas acompanhado',
+  q_minor_alone:'Viajas sozinho ou acompanhado?',
+  q_minor_alone_s:'Indica se tens um adulto responsável contigo',
     tra_sch_note:'O teu próximo voo vai para o espaço Schengen. Precisas de passar a fronteira.',
-    s_dip_d:'Apresenta o passaporte ao agente de fronteira — isenção EES tratada no balcão',
+    s_dip_d:'Apresenta o passaporte ao agente da PSP — isenção EES tratada no balcão',
   al_dip:'Passaportes diplomáticos, de serviço e NATO têm isenção de registo EES, mas devem dirigir-se ao balcão manual para validação.',
     qdip:'Fila: Diplomáticos / Serviço / NATO',
-  al_dip:'Isenção de registo EES para passaportes diplomáticos (alguns países), de serviço e NATO. O agente de fronteira no balcão trata da validação da isenção.',
-  s_dip_d:'Apresenta o teu passaporte ao agente de fronteira — sem SSK',
+  al_dip:'Isenção de registo EES para passaportes diplomáticos (alguns países), de serviço e NATO. O agente da PSP no balcão trata da validação da isenção.',
+  s_dip_d:'Apresenta o teu passaporte ao agente da PSP — sem SSK',
   no_border_sub_ent_sch:'Não há controlo de fronteira no teu voo de origem. Segue para a recolha de bagagem e depois para a saída.',
     no_border_title_ent:'Sem controlo de fronteira',
     q_tr_pt:'O teu título de residência foi emitido por Portugal?',
@@ -316,7 +254,7 @@ var TX={
 'br':{
   ls:'Selecione seu idioma',
   go:'Continuar →',
-  srch_ph:'País do voo (não a sua nacionalidade)',
+  srch_ph:'Pesquise pelo seu país',
   qd:'O que você vai fazer?',
   qs:'Selecione sua situação atual',
   ent:'Entrar em Portugal',
@@ -329,8 +267,6 @@ var TX={
   q_orig_ent_s:'Pesquise o país de origem do seu voo',
   q_orig_sai:'Para onde você vai?',
   q_orig_sai_s:'Pesquise o país de destino do seu voo',
-  q_orig_tra:'De onde vem o seu voo de conexão?',
-  q_orig_tra_s:'Pesquise o país de origem do seu voo de conexão',
   q_tra_apt:'O seu próximo voo parte deste aeroporto?',
   q_tra_apt_s:'Indique se o seu voo de conexão usa o mesmo aeroporto',
   tra_same:'Sim, mesmo aeroporto',
@@ -381,7 +317,6 @@ var TX={
   qmis:'Indique sua situação de viagem',
   m_alone:'Viajo sozinho',
   m_adult:'Viajo com adulto responsável',
-  m_with_minor:'Viajo com menores (< 16/18 anos)',
   m_minor:'Sou menor de 16/18 anos',
   yr:'O seu percurso',
   s_egate:'Dirija-se ao e-gate/RAPID',
@@ -393,7 +328,7 @@ var TX={
   s_egate2:'Siga para o e-gate/RAPID',
   s_egate2d:'O quiosque encaminhará automaticamente',
   s_box:'Dirija-se ao balcão manual (box)',
-  s_boxd:'Apresente seu documento ao agente de fronteira',
+  s_boxd:'Apresente seu documento ao agente da PSP',
   s_box2:'Siga para o balcão manual',
   s_box2d:'Fila todos os passaportes (all passports)',
   s_box_eu:'Dirija-se ao balcão manual (box)',
@@ -406,18 +341,10 @@ var TX={
   degs:'Porta automática',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Quiosque depois porta automática',
-  dsb:'Quiosque SSK (auto-serviço)',
-  dsbs:'O quiosque lê o teu documento e encaminha para e-gate ou balcão',
-  ssk_hint_title:'No SSK, selecione o seu idioma',
-  ssk_hint_sub:'As bandeiras na tela são idiomas — não o seu país de origem',
-  ssk_hint_ex:'Exemplos frequentes',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Escolha a bandeira do Reino Unido',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Escolha a bandeira de Portugal',
-  qr_note:'Apresente o código QR da app EES na fase do questionário',
+  dsb:'SSK → Balcão manual',
+  dsbs:'Quiosque depois balcão',
   dbo:'Balcão manual (box)',
-  dbos:'Controle por agente de fronteira',
+  dbos:'Controle por agente da PSP',
   dbd:'Zona de embarque',
   dbds:'Sem controle de fronteira',
   dcrew:'Canal de tripulações',
@@ -438,14 +365,14 @@ var TX={
   cn2:'Não',
   qcrew2:'Você tem o seu crew ID?',
   qcrew2s:'Cartão de identificação de tripulante válido',
-  q_minor_alone:'Você está acompanhado por um adulto responsável?',
-  q_minor_alone_s:'Como menor de idade, indique se viaja acompanhado',
+  q_minor_alone:'Você viaja sozinho ou acompanhado?',
+  q_minor_alone_s:'Indique se você tem um adulto responsável com você',
     tra_sch_note:'Seu próximo voo vai para o espaço Schengen. Você precisa passar pela fronteira.',
-    s_dip_d:'Apresente o passaporte ao agente de fronteira — isenção EES tratada no balcão',
+    s_dip_d:'Apresente o passaporte ao agente da PSP — isenção EES tratada no balcão',
   al_dip:'Passaportes diplomáticos, de serviço e NATO têm isenção de registro EES, mas devem se dirigir ao balcão manual para validação.',
     qdip:'Fila: Diplomáticos / Serviço / NATO',
-  al_dip:'Isenção de registro EES para passaportes diplomáticos (alguns países), de serviço e NATO. O agente de fronteira no balcão trata da validação da isenção.',
-  s_dip_d:'Apresente o seu passaporte ao agente de fronteira — sem SSK',
+  al_dip:'Isenção de registro EES para passaportes diplomáticos (alguns países), de serviço e NATO. O agente da PSP no balcão trata da validação da isenção.',
+  s_dip_d:'Apresente o seu passaporte ao agente da PSP — sem SSK',
   no_border_sub_ent_sch:'Não há controle de fronteira no seu voo de origem. Siga para a retirada de bagagem e depois para a saída.',
     no_border_title_ent:'Sem controle de fronteira',
     q_tr_pt:'O seu título de residência foi emitido por Portugal?',
@@ -458,7 +385,7 @@ var TX={
 'en':{
   ls:'Select your language',
   go:'Continue →',
-  srch_ph:'Country of flight (not your nationality)',
+  srch_ph:'Search your country',
   qd:'What are you doing?',
   qs:'Select your current situation',
   ent:'Entering Portugal',
@@ -471,8 +398,6 @@ var TX={
   q_orig_ent_s:'Search the country your flight departs from',
   q_orig_sai:'Where are you going?',
   q_orig_sai_s:'Search your flight destination country',
-  q_orig_tra:'Where is your connecting flight coming from?',
-  q_orig_tra_s:'Search the country your inbound flight departs from',
   q_tra_apt:'Does your next flight leave from this airport?',
   q_tra_apt_s:'Indicate whether your connecting flight uses the same airport',
   tra_same:'Yes, same airport',
@@ -523,7 +448,6 @@ var TX={
   qmis:'Indicate your travel situation',
   m_alone:'Travelling alone',
   m_adult:'Travelling with a responsible adult',
-  m_with_minor:'Travelling with minors (under 16/18)',
   m_minor:'I am under 16/18 years old',
   yr:'Your route',
   s_egate:'Go to the e-gate/RAPID',
@@ -535,7 +459,7 @@ var TX={
   s_egate2:'Proceed to the e-gate/RAPID',
   s_egate2d:'The kiosk will direct you automatically',
   s_box:'Go to the manual border counter (box)',
-  s_boxd:'Present your document to the border officer',
+  s_boxd:'Present your document to the PSP officer',
   s_box2:'Proceed to the manual counter',
   s_box2d:'All passports queue',
   s_box_eu:'Go to the manual border counter (box)',
@@ -548,18 +472,10 @@ var TX={
   degs:'Automatic gate',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Kiosk then automatic gate',
-  dsb:'SSK self-service kiosk',
-  dsbs:'The kiosk reads your document and routes you to the e-gate or counter',
-  ssk_hint_title:'At the SSK, select your language',
-  ssk_hint_sub:'Flags on screen = language, not your country of origin',
-  ssk_hint_ex:'Common examples',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Choose the UK flag for English',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Choose the Portugal flag',
-  qr_note:'Present your QR code from the EES app during the questionnaire phase',
+  dsb:'SSK → Manual counter',
+  dsbs:'Kiosk then manual counter',
   dbo:'Manual border counter (box)',
-  dbos:'Control by border officer',
+  dbos:'Control by PSP officer',
   dbd:'Boarding area',
   dbds:'No border control',
   dcrew:'Crew channel',
@@ -580,14 +496,14 @@ var TX={
   cn2:'No',
   qcrew2:'Do you have your crew ID?',
   qcrew2s:'Valid crew identification card',
-  q_minor_alone:'Are you with a responsible adult?',
-  q_minor_alone_s:'As a minor, let us know if you have an adult with you',
+  q_minor_alone:'Are you travelling alone or with an adult?',
+  q_minor_alone_s:'Indicate whether you have a responsible adult with you',
     tra_sch_note:'Your next flight goes to the Schengen area. You need to pass through border control.',
-    s_dip_d:'Present your passport to the border officer — EES exemption processed at the counter',
+    s_dip_d:'Present your passport to the PSP officer — EES exemption processed at the counter',
   al_dip:'Diplomatic, service and NATO passports are exempt from EES registration but must go to the manual counter for validation.',
     qdip:'Queue: Diplomatic / Service / NATO',
-  al_dip:'EES registration exemption for diplomatic passports (some countries), service and NATO passports. The border officer at the counter handles exemption validation.',
-  s_dip_d:'Present your passport to the border officer — no SSK required',
+  al_dip:'EES registration exemption for diplomatic passports (some countries), service and NATO passports. The PSP officer at the counter handles exemption validation.',
+  s_dip_d:'Present your passport to the PSP officer — no SSK required',
   no_border_sub_ent_sch:'No border control for your inbound flight. Proceed to baggage claim and then to the exit.',
     no_border_title_ent:'No border control',
     q_tr_pt:'Was your residence permit issued by Portugal?',
@@ -600,7 +516,7 @@ var TX={
 'fr':{
   ls:'Sélectionnez votre langue',
   go:'Continuer →',
-  srch_ph:'Pays du vol (pas votre nationalité)',
+  srch_ph:'Rechercher votre pays',
   qd:'Que faites-vous ?',
   qs:'Sélectionnez votre situation',
   ent:'Entrer au Portugal',
@@ -613,8 +529,6 @@ var TX={
   q_orig_ent_s:'Recherchez le pays d\'origine de votre vol',
   q_orig_sai:'Où allez-vous ?',
   q_orig_sai_s:'Recherchez le pays de destination de votre vol',
-  q_orig_tra:'D\'où vient votre vol de correspondance ?',
-  q_orig_tra_s:'Recherchez le pays de départ de votre vol entrant',
   q_tra_apt:'Votre prochain vol part-il de cet aéroport ?',
   q_tra_apt_s:'Indiquez si votre vol de correspondance utilise le même aéroport',
   tra_same:'Oui, même aéroport',
@@ -665,7 +579,6 @@ var TX={
   qmis:'Indiquez votre situation de voyage',
   m_alone:'Je voyage seul',
   m_adult:'Je voyage avec un adulte responsable',
-  m_with_minor:'Je voyage avec des mineurs (< 16/18 ans)',
   m_minor:'J\'ai moins de 16/18 ans',
   yr:'Votre itinéraire',
   s_egate:'Dirigez-vous vers l\'e-gate/RAPID',
@@ -690,18 +603,10 @@ var TX={
   degs:'Porte automatique',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Borne puis porte automatique',
-  dsb:'Borne SSK (libre-service)',
-  dsbs:'La borne vous indiquera la suite',
-  ssk_hint_title:'Au SSK, sélectionnez votre langue',
-  ssk_hint_sub:'Les drapeaux = langue, pas votre pays d\'origine',
-  ssk_hint_ex:'Exemples fréquents',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Choisissez le drapeau du Royaume-Uni',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Choisissez le drapeau du Portugal',
-  qr_note:'Présentez votre QR code de l\'app EES lors du questionnaire',
+  dsb:'SSK → Guichet manuel',
+  dsbs:'Borne puis guichet',
   dbo:'Guichet manuel (box)',
-  dbos:'Contrôle par agent de frontière',
+  dbos:'Contrôle par agent PSP',
   dbd:'Zone d\'embarquement',
   dbds:'Pas de contrôle frontalier',
   dcrew:'Canal équipage',
@@ -722,14 +627,14 @@ var TX={
   cn2:'Non',
   qcrew2:'Avez-vous votre crew ID ?',
   qcrew2s:'Carte d\'identification de membre d\'équipage valide',
-  q_minor_alone:'Êtes-vous avec un adulte responsable ?',
-  q_minor_alone_s:'En tant que mineur, indiquez si vous êtes accompagné',
+  q_minor_alone:'Voyagez-vous seul ou avec un adulte?',
+  q_minor_alone_s:'Indiquez si vous avez un adulte responsable avec vous',
     tra_sch_note:'Votre prochain vol va dans l\'espace Schengen. Vous devez passer le contrôle frontalier.',
-    s_dip_d:"Présentez votre passeport à l\'agent de frontière — exemption EES traitée au guichet",
+    s_dip_d:"Présentez votre passeport à l\'agent PSP — exemption EES traitée au guichet",
   al_dip:"Les passeports diplomatiques, de service et OTAN sont exemptés de l\'enregistrement EES mais doivent se présenter au guichet manuel.",
     qdip:'File : Diplomatiques / Service / OTAN',
-  al_dip:'Exemption EES pour les passeports diplomatiques (certains pays), de service et OTAN. L\'agent de frontière au guichet traite la validation de l\'exemption.',
-  s_dip_d:'Présentez votre passeport à l\'agent de frontière — sans SSK',
+  al_dip:'Exemption EES pour les passeports diplomatiques (certains pays), de service et OTAN. L\'agent PSP au guichet traite la validation de l\'exemption.',
+  s_dip_d:'Présentez votre passeport à l\'agent PSP — sans SSK',
   no_border_sub_ent_sch:'Pas de contrôle frontalier pour votre vol en provenance. Dirigez-vous vers la récupération des bagages puis vers la sortie.',
     no_border_title_ent:'Pas de contrôle frontalier',
     q_tr_pt:'Votre titre de séjour a-t-il été délivré par le Portugal ?',
@@ -742,7 +647,7 @@ var TX={
 'es':{
   ls:'Selecciona tu idioma',
   go:'Continuar →',
-  srch_ph:'País del vuelo (no tu nacionalidad)',
+  srch_ph:'Busca tu país',
   qd:'¿Qué vas a hacer?',
   qs:'Selecciona tu situación actual',
   ent:'Entrar en Portugal',
@@ -755,8 +660,6 @@ var TX={
   q_orig_ent_s:'Busca el país de origen de tu vuelo',
   q_orig_sai:'¿A dónde vas?',
   q_orig_sai_s:'Busca el país de destino de tu vuelo',
-  q_orig_tra:'¿De dónde viene tu vuelo de conexión?',
-  q_orig_tra_s:'Busca el país de origen de tu vuelo entrante',
   q_tra_apt:'¿Tu próximo vuelo sale de este aeropuerto?',
   q_tra_apt_s:'Indica si tu vuelo de conexión usa el mismo aeropuerto',
   tra_same:'Sí, mismo aeropuerto',
@@ -807,7 +710,6 @@ var TX={
   qmis:'Indica tu situación de viaje',
   m_alone:'Viajo solo',
   m_adult:'Viajo con adulto responsable',
-  m_with_minor:'Viajo con menores (< 16/18 años)',
   m_minor:'Soy menor de 16/18 años',
   yr:'Tu recorrido',
   s_egate:'Dirígete a la e-gate/RAPID',
@@ -832,18 +734,10 @@ var TX={
   degs:'Puerta automática',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Quiosco luego puerta automática',
-  dsb:'Quiosco SSK (autoservicio)',
-  dsbs:'El quiosco le indicará el siguiente paso',
-  ssk_hint_title:'En el SSK, selecciona tu idioma',
-  ssk_hint_sub:'Las banderas = idioma, no tu país de origen',
-  ssk_hint_ex:'Ejemplos frecuentes',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Elige la bandera del Reino Unido',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Elige la bandera de Portugal',
-  qr_note:'Muestra el código QR de la app EES en la fase del cuestionario',
+  dsb:'SSK → Mostrador manual',
+  dsbs:'Quiosco luego mostrador',
   dbo:'Mostrador manual (box)',
-  dbos:'Control por agente de fronteras',
+  dbos:'Control por agente PSP',
   dbd:'Zona de embarque',
   dbds:'Sin control fronterizo',
   dcrew:'Canal de tripulación',
@@ -864,14 +758,14 @@ var TX={
   cn2:'No',
   qcrew2:'¿Tienes tu crew ID?',
   qcrew2s:'Tarjeta de identificación de tripulante válida',
-  q_minor_alone:'¿Estás con un adulto responsable?',
-  q_minor_alone_s:'Como menor, indica si viajas acompañado',
+  q_minor_alone:'¿Viajas solo o con un adulto?',
+  q_minor_alone_s:'Indica si tienes un adulto responsable contigo',
     tra_sch_note:'Tu próximo vuelo va al espacio Schengen. Debes pasar el control fronterizo.',
-    s_dip_d:'Presenta el pasaporte al agente de fronteras — exención EES tramitada en el mostrador',
+    s_dip_d:'Presenta el pasaporte al agente PSP — exención EES tramitada en el mostrador',
   al_dip:'Los pasaportes diplomáticos, de servicio y OTAN están exentos del registro EES pero deben dirigirse al mostrador manual para validación.',
     qdip:'Fila: Diplomáticos / Servicio / OTAN',
-  al_dip:'Exención EES para pasaportes diplomáticos (algunos países), de servicio y OTAN. El agente de fronteras en el mostrador gestiona la validación de la exención.',
-  s_dip_d:'Presenta tu pasaporte al agente de fronteras — sin SSK',
+  al_dip:'Exención EES para pasaportes diplomáticos (algunos países), de servicio y OTAN. El agente PSP en el mostrador gestiona la validación de la exención.',
+  s_dip_d:'Presenta tu pasaporte al agente PSP — sin SSK',
   no_border_sub_ent_sch:'No hay control fronterizo en tu vuelo de origen. Dirígete a la recogida de equipaje y luego a la salida.',
     no_border_title_ent:'Sin control fronterizo',
     q_tr_pt:'¿Tu permiso de residencia fue emitido por Portugal?',
@@ -884,7 +778,7 @@ var TX={
 'de':{
   ls:'Sprache auswählen',
   go:'Weiter →',
-  srch_ph:'Land des Fluges (nicht Nationalität)',
+  srch_ph:'Land suchen',
   qd:'Was möchten Sie tun?',
   qs:'Bitte wählen Sie Ihre Situation',
   ent:'Portugal einreisen',
@@ -897,8 +791,6 @@ var TX={
   q_orig_ent_s:'Suchen Sie das Herkunftsland Ihres Fluges',
   q_orig_sai:'Wohin fahren Sie?',
   q_orig_sai_s:'Suchen Sie das Zielland Ihres Fluges',
-  q_orig_tra:'Woher kommt Ihr Anschlussflug?',
-  q_orig_tra_s:'Suchen Sie das Herkunftsland Ihres eingehenden Fluges',
   q_tra_apt:'Startet Ihr nächster Flug von diesem Flughafen?',
   q_tra_apt_s:'Geben Sie an, ob Ihr Anschlussflug denselben Flughafen nutzt',
   tra_same:'Ja, gleicher Flughafen',
@@ -949,7 +841,6 @@ var TX={
   qmis:'Geben Sie Ihre Reisesituation an',
   m_alone:'Ich reise allein',
   m_adult:'Ich reise mit einem verantwortlichen Erwachsenen',
-  m_with_minor:'Reise mit Minderjährigen (< 16/18 Jahre)',
   m_minor:'Ich bin unter 16/18 Jahre alt',
   yr:'Ihre Route',
   s_egate:'Gehen Sie zum E-Gate/RAPID',
@@ -974,18 +865,10 @@ var TX={
   degs:'Automatisches Tor',
   dsg:'SSK → E-Gate / RAPID',
   dsgs:'Kiosk dann automatisches Tor',
-  dsb:'SSK-Kiosk (Selbstbedienung)',
-  dsbs:'Der Kiosk leitet Sie weiter',
-  ssk_hint_title:'Wählen Sie am SSK Ihre Sprache',
-  ssk_hint_sub:'Die Flaggen = Sprache, nicht Ihr Herkunftsland',
-  ssk_hint_ex:'Häufige Beispiele',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Wählen Sie die britische Flagge',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Wählen Sie die portugiesische Flagge',
-  qr_note:'Zeigen Sie Ihren QR-Code der EES-App in der Fragebogenphase',
+  dsb:'SSK → Manueller Schalter',
+  dsbs:'Kiosk dann Schalter',
   dbo:'Manueller Schalter (Box)',
-  dbos:'Kontrolle durch Grenzbeamten',
+  dbos:'Kontrolle durch PSP-Beamten',
   dbd:'Abflugbereich',
   dbds:'Keine Grenzkontrolle',
   dcrew:'Besatzungskanal',
@@ -1006,14 +889,14 @@ var TX={
   cn2:'Nein',
   qcrew2:'Haben Sie Ihren Crew-Ausweis?',
   qcrew2s:'Gültiger Crew-Identifikationsausweis',
-  q_minor_alone:'Bist du mit einem Erziehungsberechtigten?',
-  q_minor_alone_s:'Als Minderjähriger: Gib an, ob du begleitet wirst',
+  q_minor_alone:'Reisen Sie allein oder mit einem Erwachsenen?',
+  q_minor_alone_s:'Geben Sie an, ob ein Erwachsener mit Ihnen ist',
     tra_sch_note:'Ihr nächster Flug geht in den Schengen-Raum. Sie müssen die Grenzkontrolle passieren.',
-    s_dip_d:'Zeigen Sie Ihren Pass dem Grenzbeamten — EES-Befreiung wird am Schalter bearbeitet',
+    s_dip_d:'Zeigen Sie Ihren Pass dem PSP-Beamten — EES-Befreiung wird am Schalter bearbeitet',
   al_dip:'Diplomatische, Dienst- und NATO-Pässe sind von der EES-Registrierung befreit, müssen jedoch zur Validierung zum manuellen Schalter.',
     qdip:'Warteschlange: Diplomatisch / Dienst / NATO',
-  al_dip:'EES-Befreiung für diplomatische Pässe (einige Länder), Dienst- und NATO-Pässe. Der Grenzbeamte am Schalter bearbeitet die Befreiungsvalidierung.',
-  s_dip_d:'Zeigen Sie Ihren Pass dem Grenzbeamten — kein SSK erforderlich',
+  al_dip:'EES-Befreiung für diplomatische Pässe (einige Länder), Dienst- und NATO-Pässe. Der PSP-Beamte am Schalter bearbeitet die Befreiungsvalidierung.',
+  s_dip_d:'Zeigen Sie Ihren Pass dem PSP-Beamten — kein SSK erforderlich',
   no_border_sub_ent_sch:'Keine Grenzkontrolle für Ihren eingehenden Flug. Gehen Sie zur Gepäckausgabe und dann zum Ausgang.',
     no_border_title_ent:'Keine Grenzkontrolle',
     q_tr_pt:'Wurde Ihr Aufenthaltstitel von Portugal ausgestellt?',
@@ -1026,7 +909,7 @@ var TX={
 'it':{
   ls:'Seleziona la tua lingua',
   go:'Continua →',
-  srch_ph:'Paese del volo (non la tua nazionalità)',
+  srch_ph:'Cerca il tuo paese',
   qd:'Cosa stai facendo?',
   qs:'Seleziona la tua situazione',
   ent:'Entrare in Portogallo',
@@ -1039,8 +922,6 @@ var TX={
   q_orig_ent_s:'Cerca il paese di origine del tuo volo',
   q_orig_sai:'Dove vai?',
   q_orig_sai_s:'Cerca il paese di destinazione del tuo volo',
-  q_orig_tra:'Da dove arriva il tuo volo in coincidenza?',
-  q_orig_tra_s:'Cerca il paese di partenza del tuo volo in entrata',
   q_tra_apt:'Il tuo prossimo volo parte da questo aeroporto?',
   q_tra_apt_s:'Indica se il tuo volo in coincidenza usa lo stesso aeroporto',
   tra_same:'Sì, stesso aeroporto',
@@ -1091,7 +972,6 @@ var TX={
   qmis:'Indica la tua situazione di viaggio',
   m_alone:'Viaggio da solo',
   m_adult:'Viaggio con adulto responsabile',
-  m_with_minor:'Viaggio con minori (< 16/18 anni)',
   m_minor:'Ho meno di 16/18 anni',
   yr:'Il tuo percorso',
   s_egate:'Vai all\'e-gate/RAPID',
@@ -1116,18 +996,10 @@ var TX={
   degs:'Cancello automatico',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Chiosco poi cancello automatico',
-  dsb:'Chiosco SSK (self-service)',
-  dsbs:'Il chiosco ti indicherà il passo successivo',
-  ssk_hint_title:'All\'SSK, seleziona la tua lingua',
-  ssk_hint_sub:'Le bandiere = lingua, non il tuo paese di origine',
-  ssk_hint_ex:'Esempi frequenti',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Scegli la bandiera del Regno Unito',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Scegli la bandiera del Portogallo',
-  qr_note:'Mostra il codice QR dell\'app EES nella fase del questionario',
+  dsb:'SSK → Sportello manuale',
+  dsbs:'Chiosco poi sportello',
   dbo:'Sportello manuale (box)',
-  dbos:'Controllo da agente di frontiera',
+  dbos:'Controllo da agente PSP',
   dbd:'Area imbarco',
   dbds:'Nessun controllo di frontiera',
   dcrew:'Canale equipaggio',
@@ -1148,14 +1020,14 @@ var TX={
   cn2:'No',
   qcrew2:'Hai il tuo crew ID?',
   qcrew2s:'Carta d\'identificazione dell\'equipaggio valida',
-  q_minor_alone:'Sei con un adulto responsabile?',
-  q_minor_alone_s:'Da minore, indica se sei accompagnato',
+  q_minor_alone:'Viaggi da solo o con un adulto?',
+  q_minor_alone_s:'Indica se hai un adulto responsabile con te',
     tra_sch_note:'Il tuo prossimo volo va nello spazio Schengen. Devi passare il controllo di frontiera.',
-    s_dip_d:"Presenta il passaporto all\'agente di frontiera — esenzione EES gestita allo sportello",
+    s_dip_d:"Presenta il passaporto all\'agente PSP — esenzione EES gestita allo sportello",
   al_dip:"I passaporti diplomatici, di servizio e NATO sono esenti dalla registrazione EES ma devono recarsi allo sportello manuale per la convalida.",
     qdip:'Fila: Diplomatici / Servizio / NATO',
-  al_dip:'Esenzione EES per passaporti diplomatici (alcuni paesi), di servizio e NATO. L\'agente di frontiera allo sportello gestisce la convalida dell\'esenzione.',
-  s_dip_d:'Presenta il tuo passaporto all\'agente di frontiera — senza SSK',
+  al_dip:'Esenzione EES per passaporti diplomatici (alcuni paesi), di servizio e NATO. L\'agente PSP allo sportello gestisce la convalida dell\'esenzione.',
+  s_dip_d:'Presenta il tuo passaporto all\'agente PSP — senza SSK',
   no_border_sub_ent_sch:'Nessun controllo di frontiera per il tuo volo in arrivo. Vai al ritiro bagagli e poi all\'uscita.',
     no_border_title_ent:'Nessun controllo di frontiera',
     q_tr_pt:'Il tuo permesso di soggiorno è stato rilasciato dal Portogallo?',
@@ -1168,7 +1040,7 @@ var TX={
 'zh':{
   ls:'请选择您的语言',
   go:'继续 →',
-  srch_ph:'航班国家（非您的国籍）',
+  srch_ph:'搜索您的国家',
   qd:'您要做什么？',
   qs:'请选择您当前的情况',
   ent:'入境葡萄牙',
@@ -1181,8 +1053,6 @@ var TX={
   q_orig_ent_s:'搜索您航班的出发国',
   q_orig_sai:'您去哪里？',
   q_orig_sai_s:'搜索您航班的目的地国',
-  q_orig_tra:'您的转机航班来自哪里？',
-  q_orig_tra_s:'搜索您入境航班的出发国',
   q_tra_apt:'您的下一个航班从这个机场出发吗？',
   q_tra_apt_s:'说明您的转机航班是否使用同一机场',
   tra_same:'是，同一机场',
@@ -1233,7 +1103,6 @@ var TX={
   qmis:'说明您的旅行情况',
   m_alone:'独自旅行',
   m_adult:'与负责任的成年人同行',
-  m_with_minor:'与未成年人同行（< 16/18岁）',
   m_minor:'我未满16/18岁',
   yr:'您的路线',
   s_egate:'前往电子通道/RAPID',
@@ -1245,7 +1114,7 @@ var TX={
   s_egate2:'前往电子通道/RAPID',
   s_egate2d:'服务亭将自动引导您',
   s_box:'前往人工柜台（box）',
-  s_boxd:'向边境官员出示您的证件',
+  s_boxd:'向PSP官员出示您的证件',
   s_box2:'前往人工柜台',
   s_box2d:'所有护照队列',
   s_box_eu:'前往人工柜台',
@@ -1258,18 +1127,10 @@ var TX={
   degs:'自动门',
   dsg:'SSK → 电子通道 / RAPID',
   dsgs:'自助服务亭，然后自动门',
-  dsb:'SSK 自助服务亭',
-  dsbs:'自助机将指引您至下一步',
-  ssk_hint_title:'在SSK，选择您的语言',
-  ssk_hint_sub:'屏幕上的旗帜代表语言，不是您的国籍',
-  ssk_hint_ex:'常见示例',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'选择英国国旗',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'选择葡萄牙国旗',
-  qr_note:'在问卷阶段出示EES应用程序的二维码',
+  dsb:'SSK → 人工柜台',
+  dsbs:'自助服务亭，然后人工柜台',
   dbo:'人工柜台（box）',
-  dbos:'由边境官员进行检查',
+  dbos:'由PSP官员进行检查',
   dbd:'登机区',
   dbds:'无需边境检查',
   dcrew:'机组通道',
@@ -1290,14 +1151,14 @@ var TX={
   cn2:'否',
   qcrew2:'您有机组ID吗？',
   qcrew2s:'有效的机组身份证',
-  q_minor_alone:'您有负责任的成年人陪同吗？',
-  q_minor_alone_s:'作为未成年人，请说明是否有成年人陪同',
+  q_minor_alone:'您是独自旅行还是有成年人陪同？',
+  q_minor_alone_s:'说明您是否有负责任的成年人陪同',
     tra_sch_note:'您的下一个航班飞往申根区。您需要通过边境检查。',
-    s_dip_d:'向边境官员出示护照 — EES豁免在柜台处理',
+    s_dip_d:'向PSP官员出示护照 — EES豁免在柜台处理',
   al_dip:'外交、公务和北约护照免于EES登记，但必须前往人工柜台进行验证。',
     qdip:'队列：外交/公务/北约',
-  al_dip:'部分国家外交护照、公务护照和北约护照免于EES登记。边境官员在柜台处理豁免验证。',
-  s_dip_d:'向边境官员出示护照 — 无需SSK',
+  al_dip:'部分国家外交护照、公务护照和北约护照免于EES登记。PSP官员在柜台处理豁免验证。',
+  s_dip_d:'向PSP官员出示护照 — 无需SSK',
   no_border_sub_ent_sch:'您的入境航班无需过境检查。请前往行李提取处，然后前往出口。',
     no_border_title_ent:'无边境检查',
     q_tr_pt:'您的居留许可是由葡萄牙签发的吗？',
@@ -1310,7 +1171,7 @@ var TX={
 'ar':{
   ls:'اختر لغتك',
   go:'متابعة →',
-  srch_ph:'دولة الرحلة (ليست جنسيتك)',
+  srch_ph:'ابحث عن بلدك',
   qd:'ماذا ستفعل؟',
   qs:'اختر وضعك الحالي',
   ent:'الدخول إلى البرتغال',
@@ -1323,8 +1184,6 @@ var TX={
   q_orig_ent_s:'ابحث عن بلد مغادرة رحلتك',
   q_orig_sai:'إلى أين تذهب؟',
   q_orig_sai_s:'ابحث عن بلد وجهة رحلتك',
-  q_orig_tra:'من أين تأتي رحلتك الإضافية؟',
-  q_orig_tra_s:'ابحث عن بلد مغادرة رحلتك الواردة',
   q_tra_apt:'هل تغادر رحلتك التالية من هذا المطار؟',
   q_tra_apt_s:'أشر إلى ما إذا كانت رحلتك الإضافية تستخدم نفس المطار',
   tra_same:'نعم، نفس المطار',
@@ -1375,7 +1234,6 @@ var TX={
   qmis:'أشر إلى وضعك في السفر',
   m_alone:'أسافر وحدي',
   m_adult:'أسافر مع بالغ مسؤول',
-  m_with_minor:'أسافر مع قاصرين (< 16/18)',
   m_minor:'عمري أقل من 16/18 سنة',
   yr:'مسارك',
   s_egate:'اتجه إلى البوابة الإلكترونية/RAPID',
@@ -1400,18 +1258,10 @@ var TX={
   degs:'بوابة آلية',
   dsg:'SSK → بوابة إلكترونية / RAPID',
   dsgs:'كشك ثم بوابة آلية',
-  dsb:'كشك SSK (الخدمة الذاتية)',
-  dsbs:'الكشك سيرشدك للخطوة التالية',
-  ssk_hint_title:'في SSK، اختر لغتك',
-  ssk_hint_sub:'الأعلام على الشاشة = اللغة، وليس بلدك',
-  ssk_hint_ex:'أمثلة شائعة',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'اختر علم المملكة المتحدة',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'اختر علم البرتغال',
-  qr_note:'قدّم رمز QR من تطبيق EES خلال مرحلة الاستبيان',
+  dsb:'SSK → شباك يدوي',
+  dsbs:'كشك ثم شباك',
   dbo:'شباك يدوي (box)',
-  dbos:'التحكم من قبل ضابط الحدود',
+  dbos:'التحكم من قبل ضابط PSP',
   dbd:'منطقة الصعود',
   dbds:'لا يلزم التحكم في الحدود',
   dcrew:'قناة الطاقم',
@@ -1432,14 +1282,14 @@ var TX={
   cn2:'لا',
   qcrew2:'هل لديك crew ID؟',
   qcrew2s:'بطاقة تعريف طاقم الطائرة الصالحة',
-  q_minor_alone:'هل معك بالغ مسؤول؟',
-  q_minor_alone_s:'بوصفك قاصرًا، أشر إلى ما إذا كنت مصحوبًا',
+  q_minor_alone:'هل تسافر وحدك أم مع بالغ؟',
+  q_minor_alone_s:'أشر إلى ما إذا كان هناك بالغ مسؤول معك',
     tra_sch_note:'رحلتك التالية إلى منطقة شنغن. يجب عليك المرور بالتحكم في الحدود.',
-    s_dip_d:'قدم جواز سفرك لضابط الحدود — إعفاء EES يعالج عند الشباك',
+    s_dip_d:'قدم جواز سفرك لضابط PSP — إعفاء EES يعالج عند الشباك',
   al_dip:'جوازات السفر الدبلوماسية وجوازات الخدمة وجوازات الناتو معفاة من تسجيل EES لكن يجب التوجه إلى الشباك اليدوي للتحقق.',
     qdip:'طابور: دبلوماسي / خدمة / ناتو',
-  al_dip:'إعفاء EES لجوازات السفر الدبلوماسية (بعض الدول) وجوازات الخدمة والناتو. يتولى ضابط الحدود في الشباك التحقق من الإعفاء.',
-  s_dip_d:'قدم جواز سفرك لضابط الحدود — بدون SSK',
+  al_dip:'إعفاء EES لجوازات السفر الدبلوماسية (بعض الدول) وجوازات الخدمة والناتو. يتولى ضابط PSP في الشباك التحقق من الإعفاء.',
+  s_dip_d:'قدم جواز سفرك لضابط PSP — بدون SSK',
   no_border_sub_ent_sch:'لا يوجد تحكم في الحدود لرحلتك القادمة. تابع إلى استلام الأمتعة ثم إلى الخروج.',
     no_border_title_ent:'لا يوجد تحكم في الحدود',
     q_tr_pt:'هل صدر تصريح إقامتك من البرتغال؟',
@@ -1452,7 +1302,7 @@ var TX={
 'hi':{
   ls:'अपनी भाषा चुनें',
   go:'जारी रखें →',
-  srch_ph:'उड़ान का देश (राष्ट्रीयता नहीं)',
+  srch_ph:'अपना देश खोजें',
   qd:'आप क्या कर रहे हैं?',
   qs:'अपनी वर्तमान स्थिति चुनें',
   ent:'पुर्तगाल में प्रवेश',
@@ -1465,8 +1315,6 @@ var TX={
   q_orig_ent_s:'अपनी उड़ान के मूल देश को खोजें',
   q_orig_sai:'आप कहाँ जा रहे हैं?',
   q_orig_sai_s:'अपनी उड़ान के गंतव्य देश को खोजें',
-  q_orig_tra:'आपकी कनेक्टिंग फ्लाइट कहाँ से आ रही है?',
-  q_orig_tra_s:'अपनी आने वाली उड़ान के मूल देश को खोजें',
   q_tra_apt:'क्या आपकी अगली उड़ान इसी हवाई अड्डे से जाती है?',
   q_tra_apt_s:'बताएं कि आपकी कनेक्टिंग फ्लाइट एक ही हवाई अड्डे का उपयोग करती है या नहीं',
   tra_same:'हाँ, एक ही हवाई अड्डा',
@@ -1517,7 +1365,6 @@ var TX={
   qmis:'अपनी यात्रा की स्थिति बताएं',
   m_alone:'अकेले यात्रा कर रहा हूं',
   m_adult:'एक जिम्मेदार वयस्क के साथ',
-  m_with_minor:'नाबालिगों के साथ यात्रा (< 16/18 वर्ष)',
   m_minor:'मेरी उम्र 16/18 वर्ष से कम है',
   yr:'आपका मार्ग',
   s_egate:'e-gate/RAPID की ओर जाएं',
@@ -1542,18 +1389,10 @@ var TX={
   degs:'स्वचालित गेट',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'सेल्फ-सर्विस कियोस्क फिर स्वचालित गेट',
-  dsb:'SSK सेल्फ-सर्विस कियोस्क',
-  dsbs:'कियोस्क आपको अगले कदम पर निर्देशित करेगा',
-  ssk_hint_title:'SSK पर अपनी भाषा चुनें',
-  ssk_hint_sub:'झंडे = भाषा, आपका देश नहीं',
-  ssk_hint_ex:'सामान्य उदाहरण',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'UK का झंडा चुनें',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'पुर्तगाल का झंडा चुनें',
-  qr_note:'प्रश्नावली चरण में EES ऐप का QR कोड दिखाएं',
+  dsb:'SSK → मैनुअल काउंटर',
+  dsbs:'सेल्फ-सर्विस कियोस्क फिर काउंटर',
   dbo:'मैनुअल काउंटर (box)',
-  dbos:'सीमा अधिकारी द्वारा नियंत्रण',
+  dbos:'PSP अधिकारी द्वारा नियंत्रण',
   dbd:'बोर्डिंग क्षेत्र',
   dbds:'सीमा नियंत्रण आवश्यक नहीं',
   dcrew:'क्रू चैनल',
@@ -1574,14 +1413,14 @@ var TX={
   cn2:'नहीं',
   qcrew2:'क्या आपके पास क्रू ID है?',
   qcrew2s:'वैध क्रू पहचान पत्र',
-  q_minor_alone:'क्या आपके साथ कोई जिम्मेदार वयस्क है?',
-  q_minor_alone_s:'नाबालिग के रूप में, बताएं कि कोई वयस्क साथ है या नहीं',
+  q_minor_alone:'क्या आप अकेले यात्रा कर रहे हैं या किसी वयस्क के साथ?',
+  q_minor_alone_s:'बताएं कि क्या आपके साथ कोई जिम्मेदार वयस्क है',
     tra_sch_note:'आपकी अगली उड़ान शेंगेन क्षेत्र में जाती है। आपको सीमा नियंत्रण से गुजरना होगा।',
-    s_dip_d:'सीमा अधिकारी को पासपोर्ट दिखाएं — EES छूट काउंटर पर संसाधित होती है',
+    s_dip_d:'PSP अधिकारी को पासपोर्ट दिखाएं — EES छूट काउंटर पर संसाधित होती है',
   al_dip:'राजनयिक, सेवा और NATO पासपोर्ट EES पंजीकरण से मुक्त हैं लेकिन सत्यापन के लिए मैनुअल काउंटर पर जाना होगा।',
     qdip:'कतार: राजनयिक / सेवा / NATO',
-  al_dip:'कुछ देशों के राजनयिक पासपोर्ट, सेवा पासपोर्ट और NATO पासपोर्ट EES पंजीकरण से मुक्त हैं। काउंटर पर सीमा अधिकारी छूट सत्यापन संभालता है।',
-  s_dip_d:'सीमा अधिकारी को पासपोर्ट दिखाएं — SSK की जरूरत नहीं',
+  al_dip:'कुछ देशों के राजनयिक पासपोर्ट, सेवा पासपोर्ट और NATO पासपोर्ट EES पंजीकरण से मुक्त हैं। काउंटर पर PSP अधिकारी छूट सत्यापन संभालता है।',
+  s_dip_d:'PSP अधिकारी को पासपोर्ट दिखाएं — SSK की जरूरत नहीं',
   no_border_sub_ent_sch:'आपकी आने वाली उड़ान के लिए कोई सीमा नियंत्रण नहीं है। सामान संग्रह की ओर जाएं और फिर निकास की ओर।',
     no_border_title_ent:'कोई सीमा नियंत्रण नहीं',
     q_tr_pt:'क्या आपका निवास परमिट पुर्तगाल द्वारा जारी किया गया था?',
@@ -1594,7 +1433,7 @@ var TX={
 'ru':{
   ls:'Выберите язык',
   go:'Продолжить →',
-  srch_ph:'Страна рейса (не гражданство)',
+  srch_ph:'Найдите свою страну',
   qd:'Что вы делаете?',
   qs:'Выберите вашу текущую ситуацию',
   ent:'Въезд в Португалию',
@@ -1607,8 +1446,6 @@ var TX={
   q_orig_ent_s:'Найдите страну отправления вашего рейса',
   q_orig_sai:'Куда вы летите?',
   q_orig_sai_s:'Найдите страну назначения вашего рейса',
-  q_orig_tra:'Откуда прибывает ваш стыковочный рейс?',
-  q_orig_tra_s:'Найдите страну отправления входящего рейса',
   q_tra_apt:'Ваш следующий рейс вылетает из этого аэропорта?',
   q_tra_apt_s:'Укажите, использует ли ваш стыковочный рейс тот же аэропорт',
   tra_same:'Да, тот же аэропорт',
@@ -1659,7 +1496,6 @@ var TX={
   qmis:'Укажите вашу ситуацию',
   m_alone:'Путешествую один',
   m_adult:'С ответственным взрослым',
-  m_with_minor:'Путешествую с несовершеннолетними (< 16/18)',
   m_minor:'Мне меньше 16/18 лет',
   yr:'Ваш маршрут',
   s_egate:'Пройдите к e-gate/RAPID',
@@ -1684,18 +1520,10 @@ var TX={
   degs:'Автоматические ворота',
   dsg:'SSK → E-gate / RAPID',
   dsgs:'Стойка потом автоматические ворота',
-  dsb:'Стойка SSK (самообслуживание)',
-  dsbs:'Стойка укажет вам следующий шаг',
-  ssk_hint_title:'На SSK выберите язык',
-  ssk_hint_sub:'Флаги = язык, не страна происхождения',
-  ssk_hint_ex:'Частые примеры',
-  ssk_hint_us:'Americans → English',
-  ssk_hint_us_s:'Выберите флаг Великобритании',
-  ssk_hint_br:'Brasileiros → Português',
-  ssk_hint_br_s:'Выберите флаг Португалии',
-  qr_note:'Предъявите QR-код приложения EES на этапе анкеты',
+  dsb:'SSK → Ручная стойка',
+  dsbs:'Стойка потом ручная стойка',
   dbo:'Ручная стойка (box)',
-  dbos:'Контроль пограничным сотрудником',
+  dbos:'Контроль сотрудником PSP',
   dbd:'Зона посадки',
   dbds:'Пограничный контроль не требуется',
   dcrew:'Канал экипажа',
@@ -1716,14 +1544,14 @@ var TX={
   cn2:'Нет',
   qcrew2:'У вас есть удостоверение экипажа?',
   qcrew2s:'Действующее удостоверение члена экипажа',
-  q_minor_alone:'Вы с ответственным взрослым?',
-  q_minor_alone_s:'Как несовершеннолетний: укажи, есть ли взрослый рядом',
+  q_minor_alone:'Вы путешествуете один или со взрослым?',
+  q_minor_alone_s:'Укажите, есть ли с вами ответственный взрослый',
     tra_sch_note:'Ваш следующий рейс летит в Шенгенскую зону. Вам необходимо пройти пограничный контроль.',
-    s_dip_d:'Предъявите паспорт пограничному сотруднику — освобождение от EES обрабатывается на стойке',
+    s_dip_d:'Предъявите паспорт сотруднику PSP — освобождение от EES обрабатывается на стойке',
   al_dip:'Дипломатические, служебные и паспорта НАТО освобождены от регистрации EES, но должны пройти на ручную стойку для проверки.',
     qdip:'Очередь: Дипломатическая / Служебная / НАТО',
-  al_dip:'Освобождение от EES для дипломатических паспортов (некоторые страны), служебных и паспортов НАТО. Пограничный сотрудник на стойке обрабатывает подтверждение освобождения.',
-  s_dip_d:'Предъявите паспорт пограничному сотруднику — SSK не требуется',
+  al_dip:'Освобождение от EES для дипломатических паспортов (некоторые страны), служебных и паспортов НАТО. Сотрудник PSP на стойке обрабатывает подтверждение освобождения.',
+  s_dip_d:'Предъявите паспорт сотруднику PSP — SSK не требуется',
   no_border_sub_ent_sch:'Для вашего входящего рейса пограничный контроль не требуется. Пройдите к получению багажа, затем к выходу.',
     no_border_title_ent:'Нет пограничного контроля',
     q_tr_pt:'Ваш вид на жительство был выдан Португалией?',
@@ -1930,20 +1758,21 @@ var COUNTRIES=[
 /* ─── Estado ─── */
 var L='en', S={}, H=[], SC=[];
 // onTap — padrão Pontos Azuis: touchend (iOS) + click (desktop), ambos registados
+var _lastTap=0;
+var _navigating=false;
 function onTap(el, fn){
   if(!el) return;
-  var _fired = false;
-  if(window.PointerEvent){
-    el.addEventListener('pointerup', function(e){
-      // ignora se foi um scroll/drag (pointer moveu-se demasiado)
-      if(e.target !== el && !el.contains(e.target)) return;
-      _fired = true;
-      fn.call(el, e);
-    });
-  }
-  // click cobre teclado (Enter/Espaço) e browsers sem PointerEvent
+  el.addEventListener('touchend', function(e){
+    e.preventDefault();
+    if(_navigating) return;
+    _lastTap=Date.now();
+    _navigating=true;
+    fn.call(el, e);
+    setTimeout(function(){ _navigating=false; }, 800);
+  });
   el.addEventListener('click', function(e){
-    if(_fired){ _fired = false; return; } // já tratado pelo pointerup
+    if(_navigating) return;
+    if(Date.now()-_lastTap < 800) return; // ignorar click gerado pelo touchend
     fn.call(el, e);
   });
 }
@@ -1951,7 +1780,7 @@ function onTap(el, fn){
 /* ─── Helpers ─── */
 function t(k){ var tx=TX[L]||TX.en; return tx[k]!==undefined?tx[k]:k; }
 function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').trim(); }
-function set(h){ document.getElementById('app').innerHTML=h; window.scrollTo(0,0); }
+function set(h){ _navigating=false; _lastTap=0; document.getElementById('app').innerHTML=h; window.scrollTo(0,0); }
 
 function langName(c){
   var m={pt:'pt',br:'pt',fr:'fr',es:'es',de:'de',it:'it',zh:'zh',ar:'ar',hi:'hi',ru:'ru'};
@@ -2035,7 +1864,7 @@ function eqImg(type){
   if(type==='sk')    return '<img class="eqi" src="'+IMG_SSK+'" alt="SSK">';
   if(type==='bx')    return '<img class="eqi" src="'+IMG_BALCAO+'" alt="Box">';
   if(type==='sk_eg') return '<img class="eqi" src="'+IMG_SSK+'" alt="SSK"><span style="font-size:20px;margin:0 6px">→</span><img class="eqi" src="'+IMG_EGATE+'" alt="e-gate">';
-  if(type==='sk_bx') return '<img class="eqi" src="'+IMG_SSK+'" alt="SSK"><span class="ssk-dest">→ e-gate / box</span>';
+  if(type==='sk_bx') return '<img class="eqi" src="'+IMG_SSK+'" alt="SSK"><span style="font-size:20px;margin:0 6px">→</span><img class="eqi" src="'+IMG_BALCAO+'" alt="Box">';
   return '<span style="font-size:36px">✈️</span>';
 }
 
@@ -2087,8 +1916,7 @@ function showNoBorder(subKey){
     '</div>';
   set(h);
   wireBack();
-  var br = document.getElementById('btn-restart');
-  onTap(br, restart);
+
 }
 
 /* ─── ECRÃS ─── */
@@ -2111,6 +1939,8 @@ function showLang(){
   });
   h+='</div></div>';
   h+='<button class="btn btnp" id="btn-go">'+t('go')+'</button>';
+  // Search bar
+  h+='<div style="margin-top:14px">'+srchHTML('lang',t('srch_ph'))+'</div>';
   set(h);
 
   // Listeners botões de língua
@@ -2120,6 +1950,11 @@ function showLang(){
   });
   var bg = document.getElementById('btn-go');
   onTap(bg, function(){ S={}; H=[]; showDir(); });
+
+  initSearch('lang',function(c){
+    // Atalho: pesquisa por país na língua inicial
+    quickRouteFromCountry(c,'ent');
+  });
 }
 
 function pickLang(code){ L=code; document.body.style.direction=L==='ar'?'rtl':'ltr'; showLang(); }
@@ -2138,11 +1973,11 @@ function showDir(){
 }
 
 function showOriginCountry(dir){
-
+  
   S.dir=dir;
   prog(2);
-  var qKey  = dir==='ent' ? 'q_orig_ent'   : (dir==='tra' ? 'q_orig_tra'   : 'q_orig_sai');
-  var qsKey = dir==='ent' ? 'q_orig_ent_s' : (dir==='tra' ? 'q_orig_tra_s' : 'q_orig_sai_s');
+  var qKey = dir==='ent' ? 'q_orig_ent' : 'q_orig_sai';
+  var qsKey = dir==='ent' ? 'q_orig_ent_s' : 'q_orig_sai_s';
   var h='<div class="card"><h2>'+t(qKey)+'</h2><p>'+t(qsKey)+'</p>'+
     srchHTML('orig',t('srch_ph'))+
     '</div>';
@@ -2152,10 +1987,6 @@ function showOriginCountry(dir){
   initSearch('orig',function(c){
     S.originCountry=c;
     H.push('orig:'+c.en);
-    if(dir==='tra'){
-      // Trânsito no mesmo aeroporto — precisa de saber o destino para decidir fronteira
-      showTransitDest(); return;
-    }
     if(c.sch){
       // Schengen — sem controlo de fronteira
       if(dir==='ent'){
@@ -2194,19 +2025,13 @@ function showTransitDest(){
   initSearch('tradest',function(c){
     S.transitDest=c;
     H.push('tradest:'+c.en);
-    var origSch = S.originCountry ? S.originCountry.sch : false;
-    var destSch = c.sch;
-    if(origSch === destSch){
-      // Mesma zona (Sch→Sch ou não-Sch→não-Sch): sem controlo de fronteira
-      showNoBorder('no_border_sub_tra');
-    } else if(!origSch && destSch){
-      // não-Sch → Sch: entra no espaço Schengen
+    if(c.sch){
+      // Destino Schengen → precisa de passar fronteira → fluxo de documento
       S.dir='ent';
       showDoc();
     } else {
-      // Sch → não-Sch: sai do espaço Schengen
-      S.dir='sai';
-      showDoc();
+      // Destino não-Schengen → fica na zona internacional
+      showNoBorder('no_border_sub_tra');
     }
   });
 }
@@ -2239,7 +2064,8 @@ function showTRCountry(){
 }
 
 function showChip(){
-
+  
+  S.doc='tc';
   prog(4);
   var chipImgTag='<img src="'+IMG_CHIP+'" class="chip-img">';
   var h='<div class="card"><h2>'+t('qch')+'</h2><p>'+t('qchs')+'</p>'+
@@ -2308,15 +2134,12 @@ function showMinorAlone(){
 }
 
 function showMinor(){
-
+  
   prog(6);
-  var age=(S.dir==='sai')?'18':'16';
-  var mWithMinorLabel=t('m_with_minor').replace('16/18',age);
-  var mMinorLabel=t('m_minor').replace('16/18',age);
   var h='<div class="card"><h2>'+t('qmi')+'</h2><p>'+t('qmis')+'</p><div class="opts">'+
     opt('🧍',t('m_alone'),null,'alone')+
-    opt('👨‍👩‍👧',mWithMinorLabel,null,'adult')+
-    opt('👶',mMinorLabel,null,'minor')+
+    opt('👨‍👩‍👧',t('m_adult'),null,'adult')+
+    opt('👶',t('m_minor'),null,'minor')+
     '</div></div>';
   h+=backBtn();
   set(h);
@@ -2328,8 +2151,16 @@ function pick(val){
   // Dir
   if(!S.dir && (val==='ent'||val==='sai'||val==='tra')){
     H.push('dir:'+val);
-    // Trânsito: pergunta directamente a origem (sem perguntar se muda de aeroporto)
-    showOriginCountry(val);
+    if(val==='tra') showTransitAirport();
+    else showOriginCountry(val);
+    return;
+  }
+  // Transit airport
+  if(S.dir==='tra' && !S.traApt){
+    S.traApt=val;
+    H.push('tra_apt:'+val);
+    if(val==='same') showTransitDest();
+    else { S.dir='ent'; showOriginCountry('ent'); } // outro aeroporto = passa fronteira
     return;
   }
   // Doc
@@ -2338,7 +2169,6 @@ function pick(val){
     H.push('doc:'+val);
     if(val==='re') { showTRCountry(); return; }
     if(val==='tc') { showChip(); return; }
-    if(val==='ue') { showChip(); return; }
     if(val==='cr') { showCrewUniform(); return; }
     if(val==='di') { showResult(); return; } // diplomático → directo ao resultado
     showMinor(); return;
@@ -2347,19 +2177,16 @@ function pick(val){
   if(S.doc==='fa' && S.famCard===undefined){
     S.famCard=val; H.push('fam:'+val); showMinor(); return;
   }
-  // TR país — deve vir ANTES do bloco chip para 're'
-  if(S.doc==='re' && S.trCountry===undefined && (val==='tr_pt'||val==='tr_other')){
-    S.trCountry=val;
-    H.push('tr_country:'+val);
-    if(val==='tr_other') { showResult(); return; } // TR outro país → sempre balcão, sem chip
-    showChip(); return;
-  }
-  // Chip — UE, TC e TR (após país)
-  if((S.doc==='ue'||S.doc==='tc'||S.doc==='re') && S.chip===undefined){
+  // Chip
+  if(S.doc==='tc' && S.chip===undefined){
     S.chip=val;
     H.push('chip:'+val);
     if(val==='n') { showResult(); return; }
-    showMinor(); return; // chip='y': todos seguem para minor (TC já não pede nat)
+    showNat(); return;
+  }
+  // Nat
+  if(S.doc==='tc' && S.chip==='y' && !S.nat){
+    S.nat=val; H.push('nat:'+val); showMinor(); return;
   }
   // Crew uniform
   if(S.doc==='cr' && S.crewUnif===undefined){
@@ -2373,6 +2200,12 @@ function pick(val){
     S.crewID=val; H.push('crew_id:'+val); showResult(); return;
   }
   // Minor
+  // TR país
+  if(S.doc==='re' && S.trCountry===undefined && (val==='tr_pt'||val==='tr_other')){
+    S.trCountry=val;
+    H.push('tr_country:'+val);
+    showMinor(); return;
+  }
   if(S.minor===undefined){
     S.minor=val;
     H.push('minor:'+val);
@@ -2393,37 +2226,57 @@ function goBack(){
 
   // Remover última entrada do H e desfazer o estado correspondente
   var last = H.pop();
-  var k = last.split(':')[0];
+  var p=last.split(':'), k=p[0], v=p.slice(1).join(':');
+  if(k==='dir')         { delete S.dir; }
+  if(k==='orig')        { delete S.originCountry; }
+  if(k==='tra_apt')     { delete S.traApt; }
+  if(k==='tradest')     { delete S.transitDest; }
+  if(k==='doc')         { delete S.doc; }
+  if(k==='chip')        { delete S.chip; }
+  if(k==='nat')         { delete S.nat; }
+  if(k==='crew_unif')   { delete S.crewUnif; }
+  if(k==='crew_id')     { delete S.crewID; }
+  if(k==='tr_country')  { delete S.trCountry; }
+  if(k==='minor')       { delete S.minor; }
+  if(k==='minor_alone') { delete S.minorAlone; }
 
-  if(k==='dir')          { delete S.dir; }
-  else if(k==='orig')    { delete S.originCountry; }
-  else if(k==='tra_apt') { delete S.traApt; }
-  else if(k==='tradest') { delete S.transitDest; }
-  else if(k==='doc')     { delete S.doc; }
-  else if(k==='fam')     { delete S.famCard; }
-  else if(k==='chip')    { delete S.chip; }
-  else if(k==='nat')     { delete S.nat; }
-  else if(k==='crew_unif')  { delete S.crewUnif; }
-  else if(k==='crew_id')    { delete S.crewID; }
-  else if(k==='tr_country') { delete S.trCountry; }
-  else if(k==='minor')      { delete S.minor; }
-  else if(k==='minor_alone'){ delete S.minorAlone; }
+  if(H.length===0){
+    if(k==='dir') showLang();
+    else if(k==='orig') showDir();
+    else if(k==='tra_apt') showTransitAirport();
+    else showDir();
+    return;
+  }
 
-  // Mostrar o ecrã que pede a resposta para a chave que acabou de ser removida
-  switch(k){
-    case 'dir':          showLang();                       break;
-    case 'orig':         showOriginCountry(S.dir||'ent');  break;
-    case 'tra_apt':      showTransitAirport();             break;
-    case 'tradest':      showTransitDest();                break;
-    case 'doc':          showDoc();                        break;
-    case 'fam':          showDoc();                        break;
-    case 'tr_country':   showTRCountry();                  break;
-    case 'chip':         showChip();                       break;
-    case 'crew_unif':    showCrewUniform();                break;
-    case 'crew_id':      showCrewID();                     break;
-    case 'minor':        showMinor();                      break;
-    case 'minor_alone':  showMinorAlone();                 break;
-    default:             showDir();
+  // Determinar que ecrã mostrar com base na última entrada do H
+  var prev = H[H.length-1];
+  var pk = prev.split(':')[0];
+  switch(pk){
+    case 'dir':
+      showDir();
+      break;
+    case 'orig':      showOriginCountry(S.dir||'ent'); break;
+    case 'tra_apt':   showTransitDest(); break;
+    case 'tradest':   showDoc(); break;
+    case 'doc':
+      var doc=prev.split(':')[1];
+      if(doc==='re') showTRCountry();
+      else if(doc==='tc') showChip();
+      else if(doc==='cr') showCrewUniform();
+      else showMinor();
+      break;
+    case 'tr_country': showMinor(); break;
+    case 'chip':
+      var ch=prev.split(':')[1];
+      if(ch==='y') showNat(); else showMinor();
+      break;
+    case 'nat':       showMinor(); break;
+    case 'crew_unif': showCrewID(); break;
+    case 'minor':
+      var mi=prev.split(':')[1];
+      if(mi==='minor') showMinorAlone(); else showResult();
+      break;
+    default: showDir();
   }
 }
 
@@ -2435,7 +2288,6 @@ function showResult(){
   var dir=S.dir||'ent', doc=S.doc||'', chip=S.chip||'', nat=S.nat||'',
       fam=S.famCard||'', minor=S.minor||'', crewUnif=S.crewUnif||'', crewID=S.crewID||'';
   var isExit=(dir==='sai');
-  var isMinor=(minor==='minor'||minor==='adult');
   var steps='', eq='', qb='', alerts='';
 
   // ── Menor não acompanhado (minor=minor + minorAlone=alone) ──
@@ -2443,7 +2295,7 @@ function showResult(){
     steps=step(1,t('s_box'),t('s_boxd'));
     eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
     alerts='<div class="al-w">'+t('al_unaccomp')+'</div>';
-    qb=(doc==='ue')?'<div class="qb qb-eu">'+t('qeu')+'</div>':'<div class="qb qb-all">'+t('qal')+'</div>';
+    qb='<div class="qb qb-all">'+t('qal')+'</div>';
   }
   // ── Tripulação ──
   else if(doc==='cr'){
@@ -2460,22 +2312,25 @@ function showResult(){
     }
   }
   // ── Diplomático / Serviço / NATO ──
+  // Todos ao balcão manual directo (sem SSK)
+  // Isenção EES (diplomáticos de alguns países, serviço, NATO) é tratada pelo agente
   else if(doc==='di'){
     steps=step(1,t('s_box'),t('s_dip_d'));
     eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
+    qb='<div class="qb qb-dip">'+t('qdip')+'</div>';
     alerts='<div class="al-i">'+t('al_dip')+'</div>';
   }
   // ── UE ──
   else if(doc==='ue'){
+    if(minor==='minor'||(minor!=='minor'&&false)){
+      // menor (tratado abaixo via flag minor)
+    }
+    var isMinor=(minor==='minor');
+    var lim=isExit?18:16;
     if(isMinor){
       steps=step(1,t('s_box_eu'),t('s_box_eud'));
       eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
       alerts='<div class="al-m">'+(isExit?t('al_minor_sai'):t('al_minor_ent'))+'</div>';
-    } else if(chip==='n'){
-      // Passaporte UE sem chip → balcão
-      steps=step(1,t('s_box'),t('s_boxd'));
-      eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
-      alerts='<div class="al-i">'+t('al_nochip')+'</div>';
     } else {
       steps=step(1,t('s_egate'),t('s_egated'));
       eq='<div class="eq eq-g">'+eqImg('eg')+'<div><div class="eqt">'+t('deg')+'</div><div class="eqs">'+t('degs')+'</div></div></div>';
@@ -2485,15 +2340,9 @@ function showResult(){
   // ── Título Residência ──
   else if(doc==='re'){
     var trPT=(S.trCountry==='tr_pt');
-    if(chip==='n'){
-      // Sem chip → balcão independentemente do país emissor
-      steps=step(1,t('s_box'),t('s_boxd'));
-      eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
-      qb='<div class="qb qb-all">'+t('qal')+'</div>';
-      alerts='<div class="al-i">'+t('al_nochip')+'</div>';
-      if(isMinor) alerts+='<div class="al-m">'+(isExit?t('al_minor_sai'):t('al_minor_ent'))+'</div>';
-    } else if(trPT){
-      // TR Portugal + chip → e-gate (excepto menores)
+    if(trPT){
+      // TR Portugal → e-gate directa, fila EU — excepto menores
+      var isMinor=(minor==='minor');
       if(isMinor){
         steps=step(1,t('s_box'),t('s_boxd'));
         eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
@@ -2509,7 +2358,7 @@ function showResult(){
       steps=step(1,t('s_box'),t('s_boxd'));
       eq='<div class="eq eq-b">'+eqImg('bx')+'<div><div class="eqt">'+t('dbo')+'</div><div class="eqs">'+t('dbos')+'</div></div></div>';
       qb='<div class="qb qb-all">'+t('qal')+'</div>';
-      if(isMinor) alerts='<div class="al-m">'+(isExit?t('al_minor_sai'):t('al_minor_ent'))+'</div>';
+      if(minor==='minor') alerts='<div class="al-m">'+(isExit?t('al_minor_sai'):t('al_minor_ent'))+'</div>';
     }
   }
 
@@ -2520,158 +2369,19 @@ function showResult(){
     qb='<div class="qb qb-all">'+t('qal')+'</div>';
     alerts='<div class="al-i">'+t('al_nochip')+'</div>';
   }
-  // ── TCE com chip → SSK (o quiosque indica o próximo passo) ──
+  // ── TCE com chip ──
   else if(doc==='tc' && chip==='y'){
-    steps=step(1,isExit?t('s_ssk_exit'):t('s_ssk'),isExit?t('s_ssk_exitd'):t('s_sskd'));
-    var qrSvg=
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="50" height="50">'+
-        '<rect width="21" height="21" fill="#fff"/>'+
-        '<rect x="0" y="0" width="7" height="7" fill="#000"/>'+
-        '<rect x="1" y="1" width="5" height="5" fill="#fff"/>'+
-        '<rect x="2" y="2" width="3" height="3" fill="#000"/>'+
-        '<rect x="14" y="0" width="7" height="7" fill="#000"/>'+
-        '<rect x="15" y="1" width="5" height="5" fill="#fff"/>'+
-        '<rect x="16" y="2" width="3" height="3" fill="#000"/>'+
-        '<rect x="0" y="14" width="7" height="7" fill="#000"/>'+
-        '<rect x="1" y="15" width="5" height="5" fill="#fff"/>'+
-        '<rect x="2" y="16" width="3" height="3" fill="#000"/>'+
-        '<rect x="8" y="6" width="1" height="1" fill="#000"/>'+
-        '<rect x="10" y="6" width="1" height="1" fill="#000"/>'+
-        '<rect x="12" y="6" width="1" height="1" fill="#000"/>'+
-        '<rect x="6" y="8" width="1" height="1" fill="#000"/>'+
-        '<rect x="6" y="10" width="1" height="1" fill="#000"/>'+
-        '<rect x="6" y="12" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="0" width="1" height="1" fill="#000"/>'+
-        '<rect x="10" y="0" width="1" height="1" fill="#000"/>'+
-        '<rect x="12" y="0" width="1" height="1" fill="#000"/>'+
-        '<rect x="9" y="1" width="2" height="1" fill="#000"/>'+
-        '<rect x="8" y="2" width="1" height="1" fill="#000"/>'+
-        '<rect x="11" y="2" width="2" height="1" fill="#000"/>'+
-        '<rect x="9" y="3" width="1" height="2" fill="#000"/>'+
-        '<rect x="12" y="4" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="5" width="2" height="1" fill="#000"/>'+
-        '<rect x="11" y="5" width="1" height="1" fill="#000"/>'+
-        '<rect x="0" y="8" width="1" height="1" fill="#000"/>'+
-        '<rect x="2" y="8" width="2" height="1" fill="#000"/>'+
-        '<rect x="5" y="8" width="1" height="1" fill="#000"/>'+
-        '<rect x="1" y="9" width="1" height="1" fill="#000"/>'+
-        '<rect x="4" y="9" width="1" height="2" fill="#000"/>'+
-        '<rect x="0" y="10" width="2" height="1" fill="#000"/>'+
-        '<rect x="3" y="10" width="1" height="1" fill="#000"/>'+
-        '<rect x="1" y="11" width="2" height="1" fill="#000"/>'+
-        '<rect x="5" y="11" width="1" height="1" fill="#000"/>'+
-        '<rect x="0" y="12" width="1" height="1" fill="#000"/>'+
-        '<rect x="3" y="12" width="2" height="1" fill="#000"/>'+
-        '<rect x="8" y="8" width="2" height="1" fill="#000"/>'+
-        '<rect x="11" y="8" width="1" height="1" fill="#000"/>'+
-        '<rect x="13" y="8" width="1" height="1" fill="#000"/>'+
-        '<rect x="9" y="9" width="1" height="2" fill="#000"/>'+
-        '<rect x="12" y="9" width="2" height="1" fill="#000"/>'+
-        '<rect x="8" y="10" width="1" height="1" fill="#000"/>'+
-        '<rect x="11" y="10" width="1" height="2" fill="#000"/>'+
-        '<rect x="13" y="11" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="12" width="3" height="1" fill="#000"/>'+
-        '<rect x="12" y="12" width="2" height="1" fill="#000"/>'+
-        '<rect x="8" y="13" width="1" height="1" fill="#000"/>'+
-        '<rect x="10" y="13" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="8" width="1" height="2" fill="#000"/>'+
-        '<rect x="16" y="8" width="2" height="1" fill="#000"/>'+
-        '<rect x="19" y="8" width="2" height="1" fill="#000"/>'+
-        '<rect x="15" y="9" width="1" height="1" fill="#000"/>'+
-        '<rect x="18" y="9" width="1" height="1" fill="#000"/>'+
-        '<rect x="17" y="10" width="1" height="1" fill="#000"/>'+
-        '<rect x="20" y="10" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="11" width="2" height="1" fill="#000"/>'+
-        '<rect x="18" y="11" width="2" height="1" fill="#000"/>'+
-        '<rect x="16" y="12" width="1" height="2" fill="#000"/>'+
-        '<rect x="19" y="12" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="13" width="1" height="1" fill="#000"/>'+
-        '<rect x="17" y="13" width="1" height="1" fill="#000"/>'+
-        '<rect x="20" y="13" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="14" width="1" height="1" fill="#000"/>'+
-        '<rect x="10" y="14" width="2" height="1" fill="#000"/>'+
-        '<rect x="13" y="14" width="1" height="1" fill="#000"/>'+
-        '<rect x="9" y="15" width="1" height="2" fill="#000"/>'+
-        '<rect x="12" y="15" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="16" width="1" height="1" fill="#000"/>'+
-        '<rect x="11" y="16" width="2" height="1" fill="#000"/>'+
-        '<rect x="10" y="17" width="1" height="1" fill="#000"/>'+
-        '<rect x="13" y="17" width="1" height="1" fill="#000"/>'+
-        '<rect x="8" y="18" width="2" height="1" fill="#000"/>'+
-        '<rect x="12" y="18" width="2" height="1" fill="#000"/>'+
-        '<rect x="9" y="19" width="1" height="1" fill="#000"/>'+
-        '<rect x="11" y="19" width="1" height="2" fill="#000"/>'+
-        '<rect x="13" y="20" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="14" width="2" height="1" fill="#000"/>'+
-        '<rect x="17" y="14" width="1" height="1" fill="#000"/>'+
-        '<rect x="19" y="14" width="2" height="1" fill="#000"/>'+
-        '<rect x="16" y="15" width="1" height="1" fill="#000"/>'+
-        '<rect x="18" y="15" width="1" height="2" fill="#000"/>'+
-        '<rect x="15" y="16" width="1" height="2" fill="#000"/>'+
-        '<rect x="17" y="17" width="2" height="1" fill="#000"/>'+
-        '<rect x="20" y="16" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="18" width="1" height="1" fill="#000"/>'+
-        '<rect x="16" y="18" width="1" height="1" fill="#000"/>'+
-        '<rect x="19" y="18" width="2" height="1" fill="#000"/>'+
-        '<rect x="15" y="19" width="1" height="1" fill="#000"/>'+
-        '<rect x="17" y="19" width="1" height="1" fill="#000"/>'+
-        '<rect x="14" y="20" width="1" height="1" fill="#000"/>'+
-        '<rect x="16" y="20" width="2" height="1" fill="#000"/>'+
-        '<rect x="20" y="20" width="1" height="1" fill="#000"/>'+
-      '</svg>';
-    var qrBlock=
-      '<div class="eq-qr">'+
-        '<div class="eq-qr-demo">QR Code</div>'+
-        qrSvg+
-        '<div class="eq-qr-lbl">'+t('qr_note')+'</div>'+
-      '</div>';
-    eq='<div class="eq eq-a" style="flex-wrap:nowrap;align-items:flex-start">'+
-        '<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">'+
-          '<img class="eqi" src="'+IMG_SSK+'" alt="SSK" style="flex-shrink:0">'+
-          '<div>'+
-            '<div class="ssk-dest" style="margin-left:0">→ e-gate / box</div>'+
-            '<div class="eqt">'+t('dsb')+'</div>'+
-            '<div class="eqs">'+t('dsbs')+'</div>'+
-          '</div>'+
-        '</div>'+
-        qrBlock+
-      '</div>';
+    var isEgate=(nat==='ee'||nat==='es');
+    var isMinor=(minor==='minor');
+    if(isEgate && !isMinor){
+      steps=step(1,isExit?t('s_ssk_exit'):t('s_ssk'),isExit?t('s_ssk_exitd'):t('s_sskd'))+step(2,t('s_egate2'),t('s_egate2d'));
+      eq='<div class="eq eq-g">'+eqImg('sk_eg')+'<div><div class="eqt">'+t('dsg')+'</div><div class="eqs">'+t('dsgs')+'</div></div></div>';
+    } else {
+      steps=step(1,isExit?t('s_ssk_exit'):t('s_ssk'),isExit?t('s_ssk_exitd'):t('s_sskd'))+step(2,t('s_box2'),t('s_box2d'));
+      eq='<div class="eq eq-a">'+eqImg('sk_bx')+'<div><div class="eqt">'+t('dsb')+'</div><div class="eqs">'+t('dsbs')+'</div></div></div>';
+      qb='<div class="qb qb-all">'+t('qal')+'</div>';
+    }
     if(isMinor) alerts='<div class="al-m">'+(isExit?t('al_minor_sai'):t('al_minor_ent'))+'</div>';
-    var sskHint=
-      '<div class="ssk-hint">'+
-        '<div class="ssk-hint-hdr">'+
-          '<span class="hico">💬</span>'+
-          '<div><div class="htitle">'+t('ssk_hint_title')+'</div>'+
-          '<div class="hsub">'+t('ssk_hint_sub')+'</div></div>'+
-        '</div>'+
-        '<div class="ssk-flag-row">'+
-          '<div class="ssk-fc"><div class="circ">🇸🇦</div><div class="cname">العربية</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇬🇧</div><div class="cname">English</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇪🇸</div><div class="cname">Español</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇫🇷</div><div class="cname">Français</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇯🇵</div><div class="cname">日本語</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇵🇹</div><div class="cname">Português</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇹🇷</div><div class="cname">Türkçe</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇨🇳</div><div class="cname">中文</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇰🇷</div><div class="cname">한국어</div></div>'+
-          '<div class="ssk-fc"><div class="circ">🇺🇦</div><div class="cname">Українська</div></div>'+
-        '</div>'+
-        '<div class="ssk-examples">'+
-          '<div class="ssk-ex-title">'+t('ssk_hint_ex')+'</div>'+
-          '<div class="ssk-ex-row">'+
-            '<span class="ssk-ex-flag">🇺🇸</span>'+
-            '<span class="ssk-ex-arr">→</span>'+
-            '<div class="ssk-ex-circ">🇬🇧</div>'+
-            '<div class="ssk-ex-txt"><strong>'+t('ssk_hint_us')+'</strong><span>'+t('ssk_hint_us_s')+'</span></div>'+
-          '</div>'+
-          '<div class="ssk-ex-row">'+
-            '<span class="ssk-ex-flag">🇧🇷</span>'+
-            '<span class="ssk-ex-arr">→</span>'+
-            '<div class="ssk-ex-circ">🇵🇹</div>'+
-            '<div class="ssk-ex-txt"><strong>'+t('ssk_hint_br')+'</strong><span>'+t('ssk_hint_br_s')+'</span></div>'+
-          '</div>'+
-        '</div>'+
-      '</div>';
   }
   else {
     steps=step(1,t('s_box'),t('s_boxd'));
@@ -2681,13 +2391,22 @@ function showResult(){
 
   var h='<div class="rc"><div class="rt">'+t('yr')+'</div>'+steps+eq+qb+alerts+'</div>';
   h+='<div class="btn2"><button class="btn" id="btn-back">'+t('bk')+'</button><button class="btn btnp" id="btn-restart">'+t('br')+'</button></div>';
-  if(typeof sskHint!=='undefined') h+=sskHint;
   set(h);
   wireBack();
   var br = document.getElementById('btn-restart');
   onTap(br, restart);
 }
 
+/* ─── Atalho rápido por país (da search na língua) ─── */
+function quickRouteFromCountry(c, defaultDir){
+  S={}; H=[];
+  S.dir=defaultDir;
+  H.push('dir:'+defaultDir);
+  if(c.sch){ showNoBorder('no_border_sub'); return; }
+  S.originCountry=c;
+  H.push('orig:'+c.en);
+  showDoc();
+}
 
 function restart(){ S={}; H=[]; showLang(); }
 
